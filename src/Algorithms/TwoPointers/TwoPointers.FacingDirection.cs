@@ -144,16 +144,16 @@ namespace Algorithms.TwoPointers
             for (int i = 0; i < nums.Length; i++)
             {
                 int diff = target - nums[i];
-                if (dictionary.ContainsKey(nums[i]))
+                if (dictionary.ContainsKey(diff))
                 {
                     // Match found
-                    result[0] = dictionary[nums[i]];
+                    result[0] = dictionary[diff];
                     result[1] = i;
                     return result;
                 }
 
-                // add to dictionary, key = difference, value = index of current number
-                dictionary.Add(diff, i);
+                // add to dictionary, key = num, value = index of current number
+                dictionary.Add(nums[i], i);
             }
 
             return result;
