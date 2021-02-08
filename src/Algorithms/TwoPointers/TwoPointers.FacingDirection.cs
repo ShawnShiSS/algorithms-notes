@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Algorithms.TwoPointers
 {
@@ -123,5 +124,39 @@ namespace Algorithms.TwoPointers
             return true;
         }
 
+        /// <summary>
+        ///     1. Two Sum
+        ///     Given an array of integers nums and an integer target, 
+        ///     return indices of the two numbers such that they add up to target.
+        ///     You may assume that each input would have exactly one solution, 
+        ///     and you may not use the same element twice.
+        ///     You can return the answer in any order.
+        ///     https://leetcode.com/problems/two-sum/
+        /// </summary>
+        /// <param name="nums"></param>
+        /// <param name="target"></param>
+        /// <returns></returns>
+        public int[] TwoSum(int[] nums, int target)
+        {
+            Dictionary<int, int> dictionary = new Dictionary<int, int>();
+            int[] result = new int[2] { -1, -1};
+
+            for (int i = 0; i < nums.Length; i++)
+            {
+                int diff = target - nums[i];
+                if (dictionary.ContainsKey(nums[i]))
+                {
+                    // Match found
+                    result[0] = dictionary[nums[i]];
+                    result[1] = i;
+                    return result;
+                }
+
+                // add to dictionary, key = difference, value = index of current number
+                dictionary.Add(diff, i);
+            }
+
+            return result;
+        }
     }
 }
