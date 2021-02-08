@@ -1,2 +1,2 @@
 # Algorithms Notes
-Summary notes on algorithms and data structures in C# for study purpose.
+## Summary notes on high-frequency interview questions on data structures and algorithms in C# for study purpose.
