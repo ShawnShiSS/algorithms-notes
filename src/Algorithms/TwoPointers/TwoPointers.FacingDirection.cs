@@ -127,7 +127,7 @@ namespace Algorithms.TwoPointers
         /// <summary>
         ///     1. Two Sum
         ///     Given an array of integers nums and an integer target, 
-        ///     return indices of the two numbers such that they add up to target.
+        ///     return INDICES of the two numbers such that they add up to target.
         ///     You may assume that each input would have exactly one solution, 
         ///     and you may not use the same element twice.
         ///     You can return the answer in any order.
@@ -136,7 +136,7 @@ namespace Algorithms.TwoPointers
         /// <param name="nums"></param>
         /// <param name="target"></param>
         /// <returns></returns>
-        public int[] TwoSum(int[] nums, int target)
+        public int[] TwoSumUsingDictionary(int[] nums, int target)
         {
             Dictionary<int, int> dictionary = new Dictionary<int, int>();
             int[] result = new int[2] { -1, -1};
@@ -158,5 +158,49 @@ namespace Algorithms.TwoPointers
 
             return result;
         }
+
+        /// <summary>
+        ///     1. Two Sum (variation)
+        ///     Given an array of integers nums and an integer target, 
+        ///     return THE TWO NUMBERS such that they add up to target.
+        ///     You may assume that each input would have exactly one solution, 
+        ///     and you may not use the same element twice.
+        ///     You can return the answer in any order.
+        ///     https://leetcode.com/problems/two-sum/
+        /// </summary>
+        /// <param name="nums"></param>
+        /// <param name="target"></param>
+        /// <returns></returns>
+        public int[] TwoSumUsingTwoPointers(int[] nums, int target)
+        {
+            int[] result = new int[2] { -1, -1 };
+            
+            // Step 1 - sort. O(NLogN) time
+            Array.Sort(nums);
+
+            // Step 2 - two pointers O(N) time
+            int left = 0;
+            int right = nums.Length - 1;
+            while (left < right)
+            { 
+                if (nums[left] + nums[right] > target)
+                {
+                    right--;
+                }
+                else if (nums[left] + nums[right] < target)
+                {
+                    left++;
+                }
+                else
+                {
+                    result[0] = nums[left];
+                    result[1] = nums[right];
+                    return result;
+                }
+            }
+            // exit when left >= right, no match found
+            return result;
+        }
+
     }
 }
