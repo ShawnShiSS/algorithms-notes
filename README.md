@@ -5,5 +5,8 @@ Summary notes on top interview questions on data structures and algorithms in C#
 - **Two Pointers**
   - Same Direction
   - Facing Direction
+    - Valid Palindrome
   - Opposite Direction
-
+- **Sorting**
+  - Quick Sort 
+  - Merge Sort
