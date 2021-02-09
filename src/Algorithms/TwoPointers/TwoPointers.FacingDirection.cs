@@ -202,5 +202,69 @@ namespace Algorithms.TwoPointers
             return result;
         }
 
+        /// <summary>
+        ///     Sort an array using Quick Sort
+        /// </summary>
+        /// <param name="nums"></param>
+        public void QuickSort(int[] nums)
+        {
+            if (nums == null || nums.Length <= 1)
+            {
+                return;
+            }
+
+            QuickSortHelper(nums, 0, nums.Length - 1);
+        }
+
+        /// <summary>
+        ///     Sort an array in place given indexes using Quick Sort
+        /// </summary>
+        /// <param name="nums"></param>
+        /// <param name="start"></param>
+        /// <param name="end"></param>
+        private void QuickSortHelper(int[] nums, int start, int end)
+        {
+            // single char or bad request
+            if (start >= end)
+            {
+                return;
+            }
+
+            int left = start;
+            int right = end;
+            // partitioning using pivot and two pointers
+            int mid = left + (right - left) / 2;
+            int pivot = nums[mid]; // NOTE pivot is an array element, not index
+
+            // NOTE left <= right, NOT left < right, to ensure sorting range gets smaller
+            while (left <= right)
+            {
+                // Find first value on the left half that is >= pivot
+                while (left <= right && nums[left] < pivot)
+                {
+                    left++;
+                }
+                // Find first value on the right half that is <= pivot
+                while (left <= right && nums[right] > pivot)
+                {
+                    right--;
+                }
+                if (left <= right) // required
+                {
+                    // swap
+                    int temp = nums[left];
+                    nums[left] = nums[right];
+                    nums[right] = temp;
+
+                    left++;
+                    right--;
+                }
+            }
+
+            // exit while when left > right, ensuring the two halves are not overlapping
+            QuickSortHelper(nums, start, right);
+            QuickSortHelper(nums, left, end);
+        }
+
     }
 }
