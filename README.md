@@ -8,7 +8,8 @@ Summary notes on top interview questions on data structures and algorithms in C#
     - Valid Palindrome
     - Valid Palindrome II
     - Two Sum
+    - Partitioning section in Quick Sort
   - Opposite Direction
 - **Sorting**
-  - Quick Sort 
+  - Quick Sort
   - Merge Sort
