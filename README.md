@@ -14,3 +14,5 @@ Summary notes on top interview questions on data structures and algorithms in C#
   - Quick Sort
   - Merge Sort
     - Merge Two Sorted Arrays
+  - Quick Select
+    - Kth Largest Element
