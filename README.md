@@ -9,7 +9,7 @@ Summary notes on top interview questions on data structures and algorithms in C#
     - Valid Palindrome II
     - Two Sum
     - Partitioning section in Quick Sort
-    - Sort Colors
+    - [Sort Colors](https://leetcode.com/problems/sort-colors/)
   - Opposite Direction
 - **Sorting**
   - Quick Sort
