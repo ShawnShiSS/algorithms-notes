@@ -14,7 +14,7 @@ namespace Algorithms.MergeSort
         /// <param name="array1"></param>
         /// <param name="array2"></param>
         /// <returns></returns>
-        public int[] MergeSortArray(int[] arrayA, int[] arrayB)
+        public int[] MergeTwoSortedArrays(int[] arrayA, int[] arrayB)
         {
             // edge cases
             if (arrayA == null && arrayB == null)
@@ -70,5 +70,7 @@ namespace Algorithms.MergeSort
 
             return result;
         }
+
+        
     }
 }
