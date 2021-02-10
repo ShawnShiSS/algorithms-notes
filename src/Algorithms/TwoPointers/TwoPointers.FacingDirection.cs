@@ -312,6 +312,12 @@ namespace Algorithms.TwoPointers
 
         }
 
+        /// <summary>
+        ///     Swap two values in an array by index.
+        /// </summary>
+        /// <param name="nums"></param>
+        /// <param name="index1"></param>
+        /// <param name="index2"></param>
         private void SwapValues(int[] nums, int index1, int index2)
         {
             if (index1 < 0 ||
