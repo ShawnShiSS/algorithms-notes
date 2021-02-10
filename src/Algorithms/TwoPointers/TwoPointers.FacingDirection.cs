@@ -266,5 +266,64 @@ namespace Algorithms.TwoPointers
             QuickSortHelper(nums, left, end);
         }
 
+
+        /// <summary>
+        ///     75. Sort Colors
+        ///     Given an array nums with n objects colored red, white, or blue, sort them in-place so that objects of the same color are adjacent, with the colors in the order red, white, and blue.
+        ///     We will use the integers 0, 1, and 2 to represent the color red, white, and blue, respectively.
+        /// </summary>
+        /// <param name="nums"></param>
+        public void SortColors(int[] nums)
+        {
+            // edge cases
+            if (nums == null || nums.Length <= 1)
+            {
+                return;
+            }
+
+            // two pointers
+            // left pointer tracking 0s, exclusive
+            // right pointer tracking 2s, exclusive
+            int left = 0;
+            int right = nums.Length - 1;
+            int current = 0;
+            while (current <= right) // NOTE: i<=right, not length
+            {
+                if (nums[current] == 0)
+                {
+                    // swap 0s to left pointer
+                    SwapValues(nums, left, current);
+                    left++;
+                    current++;
+                }
+                else if (nums[current] == 2)
+                {
+                    // swap 2s to right pointer
+                    // BUT DO NOT increment current, as it may be 0 and has to be evaluated again
+                    SwapValues(nums, right, current);
+                    right--;
+                }
+                else
+                {
+                    // skip 1s
+                    current++;
+                }
+            }
+
+        }
+
+        private void SwapValues(int[] nums, int index1, int index2)
+        {
+            if (index1 < 0 ||
+                index2 < 0 ||
+                index1 >= nums.Length ||
+                index2 >= nums.Length)
+            {
+                throw new ArgumentOutOfRangeException();
+            }
+            int temp = nums[index1];
+            nums[index1] = nums[index2];
+            nums[index2] = temp;
+        }
     }
 }
