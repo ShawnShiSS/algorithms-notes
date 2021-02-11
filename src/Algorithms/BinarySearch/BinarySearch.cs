@@ -7,8 +7,10 @@ namespace Algorithms.BinarySearch
     public class BinarySearch
     {
         /// <summary>
-        ///     Find the index of target in a sorted array.
-        ///     Return -1 if not found.
+        ///     457. Classical Binary Search
+        ///     Find any position of a target number in a sorted array. Return -1 if target does not exist.
+        ///     O(logn) time
+        ///     https://www.lintcode.com/problem/classical-binary-search
         /// </summary>
         /// <param name="nums"></param>
         /// <param name="target"></param>
