@@ -164,5 +164,62 @@ namespace Algorithms.BinarySearch
 
             return -1;
         }
+
+        /// <summary>
+        ///     14. First Position of Target
+        ///     For a given sorted array (ascending order) and a target number, find the first index of this number in O(log n) time complexity.
+        ///     If the target number does not exist in the array, return -1.
+        ///     O(logn) time
+        ///     https://www.lintcode.com/problem/first-position-of-target/
+        /// </summary>
+        /// <param name="nums"></param>
+        /// <param name="target"></param>
+        /// <returns></returns>
+        public int FindFirstPosition(int[] nums, int target)
+        {
+            // edge case
+            if (nums == null || nums.Length == 0)
+            {
+                return -1;
+            }
+
+            int start = 0;
+            int end = nums.Length - 1;
+            int mid = 0;
+            // NOTE 1: exit when start and end are adjacent
+            while (start + 1 < end)
+            {
+                mid = start + (end - start) / 2; // NOTE 2: avoid overflow
+                if (nums[mid] == target)
+                {
+                    // first position, move end
+                    end = mid;
+                }
+
+                if (nums[mid] < target)
+                {
+                    // remove left half.
+                    // NOTE : mid + 1 also works, BUT for other use cases like searching last position of a target, mid + 1 will NOT work. Using start = mid as template code!
+                    start = mid;
+                }
+
+                if (nums[mid] > target)
+                {
+                    end = mid;
+                }
+            }
+
+            // NOTE : must check both start and end
+            if (nums[start] == target)
+            {
+                return start;
+            }
+            if (nums[end] == target)
+            {
+                return end;
+            }
+
+            return -1;
+        }
     }
 }
