@@ -84,13 +84,14 @@ namespace Algorithms.BinarySearch
                 
                 if (nums[mid] < target)
                 {
-                    // remove left half
-                    start = mid + 1;
+                    // remove left half.
+                    // NOTE : mid + 1 also works, BUT for other use cases like searching last position of a target, mid + 1 will NOT work. Using start = mid as template code!
+                    start = mid;
                 }
 
                 if (nums[mid] > target)
                 {
-                    end = mid - 1;
+                    end = mid;
                 }
             }
 
