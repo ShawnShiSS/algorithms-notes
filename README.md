@@ -17,3 +17,6 @@ Summary notes on top interview questions on data structures and algorithms in C#
     - Merge Two Sorted Arrays
   - Quick Select
     - Kth Largest Element
+- **Binary Search**
+  - Recursion 
+  - Non-recursion template
