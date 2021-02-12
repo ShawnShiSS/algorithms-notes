@@ -8,7 +8,7 @@ Organize the C# solutions to the most-frequently-asked data structure and algori
 - key points to avoid bugs
 - bug free templates
 
-## Algorithms and LeetCode questions
+## Algorithms and Typical Interview Questions
 - **Two Pointers**
   - Same Direction
   - Facing Direction
