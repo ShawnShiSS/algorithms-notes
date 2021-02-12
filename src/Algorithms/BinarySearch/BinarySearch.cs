@@ -221,5 +221,55 @@ namespace Algorithms.BinarySearch
 
             return -1;
         }
+
+        /// <summary>
+        ///     852. Peak Index in a Mountain Array
+        ///     Given a mountain sequence of n integers which increase firstly and then decrease, find the mountain top.
+        ///     https://leetcode.com/problems/peak-index-in-a-mountain-array/
+        ///     O(logn) solution
+        ///     Solution: find the first num that nums[i] > nums[i+1]
+        /// </summary>
+        /// <param name="nums"></param>
+        /// <returns></returns>
+        public int PeakIndexInMountainArray(int[] nums)
+        {
+            // edge cases
+            if (nums == null || nums.Length == 0)
+            {
+                return -1;
+            }
+
+            int left = 0;
+            int right = nums.Length - 1;
+            int mid = 0;
+
+            // exit when left and right are adjascent
+            while (left + 1 < right)
+            {
+                mid = left + (right - left) / 2;
+                
+                if (nums[mid] >= nums[mid+1])
+                {
+                    right = mid;
+                }
+                else
+                {
+                    left = mid;
+                }
+            }
+
+            if (nums[left] > nums[left + 1])
+            {
+                return left;
+            }
+
+            if (nums[right] > nums[right + 1])
+            {
+                return right;
+            }
+
+            return -1;
+        }
+
     }
 }
