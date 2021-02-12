@@ -239,33 +239,34 @@ namespace Algorithms.BinarySearch
                 return -1;
             }
 
-            int left = 0;
-            int right = nums.Length - 1;
+            int start = 0;
+            int end = nums.Length - 1;
             int mid = 0;
 
-            // exit when left and right are adjascent
-            while (left + 1 < right)
+            // exit when start and end are adjascent
+            while (start + 1 < end)
             {
-                mid = left + (right - left) / 2;
+                mid = start + (end - start) / 2;
                 
                 if (nums[mid] >= nums[mid+1])
                 {
-                    right = mid;
+                    end = mid;
                 }
                 else
                 {
-                    left = mid;
+                    start = mid;
                 }
             }
 
-            if (nums[left] > nums[left + 1])
+            // Check both start and end pointers
+            if (nums[start] > nums[start + 1])
             {
-                return left;
+                return start;
             }
 
-            if (nums[right] > nums[right + 1])
+            if (nums[end] > nums[end + 1])
             {
-                return right;
+                return end;
             }
 
             return -1;
