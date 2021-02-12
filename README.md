@@ -30,3 +30,4 @@ Organize the C# solutions to the most-frequently-asked data structure and algori
     - Classic binary search 
     - First position of target
     - Last position of target
+    - Mountain Sequence
