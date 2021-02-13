@@ -8,7 +8,7 @@ namespace Algorithms.TwoPointers
     {
         // Two Sum Category
         //  - Two Sum
-        //  - Three Sum
-        //  - Triangle Count
+        //  - Three Sum : reduce O(n^3) to O(n^2) solution using Two Sum template
+        //  - Triangle Count: reduce O(n^3) to O(n^2) solution using Two Sum template
     }
 }
