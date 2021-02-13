@@ -8,7 +8,7 @@ Organize the C# solutions to the most-frequently-asked data structure and algori
 - key points to avoid bugs
 - bug free templates
 
-## Topics
+## Algorithms and Typical Interview Questions
 - **Two Pointers**
   - Same Direction
   - Facing Direction
@@ -31,3 +31,6 @@ Organize the C# solutions to the most-frequently-asked data structure and algori
     - First position of target
     - Last position of target
     - Peak Index in a Mountain Array
+    
+## Articles
+- [Summary Notes on Algorithms — Two Pointers](https://shawn-shi.medium.com/summary-notes-on-algorithms-two-pointers-c81735def5b2)
