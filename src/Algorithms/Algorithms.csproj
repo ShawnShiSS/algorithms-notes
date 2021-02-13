@@ -4,4 +4,12 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="TwoPointers\TwoPointers.FacingDirection.TwoSumCategory.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="TwoPointers\TwoPointers.FacingDirection.TwoSumCategory.cs" />
+  </ItemGroup>
+
 </Project>
