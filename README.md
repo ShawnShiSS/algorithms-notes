@@ -12,13 +12,13 @@ Organize the C# solutions to the most-frequently-asked data structure and algori
 - **Two Pointers**
   - Same Direction
   - Facing Direction
-    - Easy:
+    - --- **Easy** ---
     - Valid Palindrome
     - Valid Palindrome II
     - Two Sum
     - Partitioning section in Quick Sort
     - [Sort Colors](https://leetcode.com/problems/sort-colors/)
-    - Medium:
+    - --- **Medium** ---
     - [Three Sum](https://leetcode.com/problems/3sum/)
   - Opposite Direction
 - **Sorting**
