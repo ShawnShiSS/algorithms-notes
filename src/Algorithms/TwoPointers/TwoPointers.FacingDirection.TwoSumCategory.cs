@@ -52,38 +52,47 @@ namespace Algorithms.TwoPointers
                 int left = indexA + 1;
                 int right = nums.Length - 1;
 
-                while (left < right)
-                {
-                    if (nums[left] + nums[right] > - nums[indexA])
-                    {
-                        right--;
-                    }
-                    else if (nums[left] + nums[right] < -nums[indexA])
-                    {
-                        left++;
-                    }
-                    else
-                    {
-                        // match: nums[left] + nums[right] == - nums[indexA]
-                        result.Add(new List<int>() { nums[indexA], nums[left], nums[right] });
-                        left++;
-                        right--;
-
-                        // Need to skip duplicated values
-                        while (left < right && nums[left] == nums[left - 1])
-                        {
-                            left++;
-                        }
-                        while (left < right && nums[right] == nums[right + 1])
-                        {
-                            right--;
-                        }
-                    }
-                } // exit when duplicated triplet found or left >= right
-                
+                TwoSumToTargetWithoutDuplicates(nums, left, right, -nums[indexA], result);
             }
 
             return result;
+        }
+
+        /// <summary>
+        ///     Two Sum helper to find target and skip duplicated pairs
+        /// </summary>
+        public void TwoSumToTargetWithoutDuplicates(int[] nums, int left, int right, int target, IList<IList<int>> result)
+        {
+            while(left < right)
+            {
+                if (nums[left] + nums[right] > target)
+                {
+                    right--;
+                }
+                else if (nums[left] + nums[right] < target)
+                {
+                    left++;
+                }
+                else
+                {
+                    // target found
+                    result.Add(new List<int>() { -target, nums[left], nums[right] }); // IMPORTANT: -target is nums[i]
+                    left++; // VERY IMPORTANT to increment after adding result.
+                    right--;
+
+                    // skip possible duplicates
+                    while (left < right && nums[left] == nums[left - 1])
+                    {
+                        left++;
+                    }
+
+                    while(left < right && nums[right] == nums[right + 1])
+                    {
+                        right--;
+                    }
+                }
+            } 
+
         }
 
     }
