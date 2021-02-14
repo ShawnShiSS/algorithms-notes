@@ -17,6 +17,7 @@ namespace Algorithms.TwoPointers
         ///     15. 3Sum
         ///     Given an array nums of n integers, are there elements a, b, c in nums such that a + b + c = 0? Find all unique triplets in the array which gives the sum of zero.
         ///     Notice that the solution set must not contain duplicate triplets.
+        ///     https://leetcode.com/problems/3sum/
         ///     Solution:
         ///     1. Sort
         ///     2. Reduce dimension from 3 sum to 2 sum, one while loop
