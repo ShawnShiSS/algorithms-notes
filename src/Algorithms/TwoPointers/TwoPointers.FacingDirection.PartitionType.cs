@@ -179,6 +179,44 @@ namespace Algorithms.TwoPointers
         }
 
         /// <summary>
+        ///     283. Move Zeroes
+        ///     Given an array nums, write a function to move all 0's to the end of it 
+        ///     while maintaining the relative order of the non-zero elements.
+        ///     Requirements:
+        ///         1. You must do this in-place without making a copy of the array.
+        ///         2. Minimize the total number of operations.
+        ///     https://leetcode.com/problems/move-zeroes/
+        /// </summary>
+        /// <param name="nums"></param>
+        public void MoveZeros(int[] nums)
+        {
+            // Two Pointers Same Direction, instead of partitioning Two Pointers facing direction
+            // in order to keep the original order
+            int slow = 0; // point to the first 0
+            int fast = 0; // iterator
+
+            while(fast < nums.Length)
+            {
+                if (nums[fast] != 0)
+                {
+                    nums[slow] = nums[fast];
+                    slow++;
+                    fast++;
+                }
+                else
+                {
+                    fast++;
+                }
+            } // exit when all array elements are scanned, slow points to the first element that should be 0
+
+            while(slow < nums.Length)
+            {
+                nums[slow] = 0;
+                slow++;
+            }
+        }
+
+        /// <summary>
         ///     Swap two values in an array by index.
         /// </summary>
         /// <param name="nums"></param>
