@@ -47,7 +47,7 @@ namespace Algorithms.TwoPointers
 
                 if (left <= right)
                 {
-                    SwapNumbers(nums, left, right);
+                    SwapValues(nums, left, right);
                     left++;
                     right--;
                 }
@@ -57,8 +57,21 @@ namespace Algorithms.TwoPointers
             return left;
         }
 
-        private void SwapNumbers(int[] nums, int index1, int index2)
+        /// <summary>
+        ///     Helper method to swap the values by index
+        /// </summary>
+        /// <param name="nums"></param>
+        /// <param name="index1"></param>
+        /// <param name="index2"></param>
+        private void SwapValues(int[] nums, int index1, int index2)
         {
+            if (index1 < 0 ||
+                index2 < 0 ||
+                index1 >= nums.Length ||
+                index2 >= nums.Length)
+            {
+                throw new ArgumentOutOfRangeException();
+            }
             int temp = nums[index1];
             nums[index1] = nums[index2];
             nums[index2] = temp;
