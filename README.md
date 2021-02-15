@@ -20,6 +20,7 @@ Organize the C# solutions to the most-frequently-asked data structure and algori
     - [Sort Colors](https://leetcode.com/problems/sort-colors/)
     - --- **Medium** ---
     - [Three Sum](https://leetcode.com/problems/3sum/)
+    - [Partition Array](https://www.lintcode.com/problem/partition-array/)
   - Opposite Direction
 - **Sorting**
   - Quick Sort
