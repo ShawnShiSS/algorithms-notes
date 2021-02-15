@@ -15,7 +15,6 @@ Organize the C# solutions to the most-frequently-asked data structure and algori
     - Valid Palindrome
     - Valid Palindrome II
     - Two Sum
-    - Partitioning section in Quick Sort
     - [Sort Colors](https://leetcode.com/problems/sort-colors/)
     - [Rainbow Sort, AKA, Sort K Colors](https://www.lintcode.com/problem/143/)
     - [Three Sum](https://leetcode.com/problems/3sum/)
