@@ -37,4 +37,5 @@ Organize the C# solutions to the most-frequently-asked data structure and algori
     - Peak Index in a Mountain Array
     
 ## Articles
-- [Summary Notes on Algorithms — Two Pointers](https://shawn-shi.medium.com/summary-notes-on-algorithms-two-pointers-c81735def5b2)
+- [Summary Notes on Algorithms — Two Pointers with Template Code](https://shawn-shi.medium.com/summary-notes-on-algorithms-two-pointers-c81735def5b2)
+- [Summary Notes on Algorithms — Binary Search Template using Two Pointers](https://shawn-shi.medium.com/summary-notes-on-algorithms-binary-search-template-using-two-pointers-347fbb6263a9)
