@@ -4,6 +4,9 @@ using System.Text;
 
 namespace Algorithms.TwoPointers
 {
+    /// <summary>
+    ///     A collection of two-sum type questions
+    /// </summary>
     public partial class TwoPointers
     {
         /*
