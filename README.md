@@ -17,8 +17,10 @@ Organize the C# solutions to the most-frequently-asked data structure and algori
     - Two Sum
     - Partitioning section in Quick Sort
     - [Sort Colors](https://leetcode.com/problems/sort-colors/)
+    - [Rainbow Sort, AKA, Sort K Colors](https://www.lintcode.com/problem/143/)
     - [Three Sum](https://leetcode.com/problems/3sum/)
     - [Partition Array](https://www.lintcode.com/problem/partition-array/)
+    - [Move Zeros](https://leetcode.com/problems/move-zeroes/)
   - Opposite Direction
 - **Sorting**
   - Quick Sort
