@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Algorithms.BinarySearch
 {
-    public class BinarySearch
+    public partial class BinarySearch
     {
         /// <summary>
         ///     457. Classical Binary Search
