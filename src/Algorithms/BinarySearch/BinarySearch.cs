@@ -77,25 +77,25 @@ namespace Algorithms.BinarySearch
             while (start + 1 < end)
             {
                 mid = start + (end - start) / 2; // NOTE 2: avoid overflow
+
+                // NOTE 3: check 3 scenarios
                 if (nums[mid] == target)
                 {
                     return mid;
                 }
-                
-                if (nums[mid] < target)
+                else if (nums[mid] < target)
                 {
                     // remove left half.
                     // NOTE : mid + 1 also works, BUT for other use cases like searching last position of a target, mid + 1 will NOT work. Using start = mid as template code!
                     start = mid;
-                }
-
-                if (nums[mid] > target)
+                } 
+                else // (nums[mid] > target)
                 {
                     end = mid;
                 }
             }
 
-            // NOTE : must check both start and end
+            // NOTE 4: must check both start and end
             if (nums[start] == target)
             {
                 return start;
