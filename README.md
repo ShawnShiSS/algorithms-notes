@@ -38,3 +38,6 @@ Organize the C# solutions to the most-frequently-asked data structure and algori
 ## Articles
 - [Algorithms — Two Pointers Template That Solves Many Problems](https://shawn-shi.medium.com/summary-notes-on-algorithms-two-pointers-c81735def5b2)
 - [Algorithms — Binary Search Template That Can Solve Lots of Problems](https://shawn-shi.medium.com/summary-notes-on-algorithms-binary-search-template-using-two-pointers-347fbb6263a9)
+
+## Sample images
+<img src="https://github.com/ShawnShiSS/algorithms-notes/blob/main/src/Algorithms/Uploads/Heap%20vs%20Stack.jpg" width="520" height="200">
