@@ -34,6 +34,8 @@ Organize the C# solutions to the most-frequently-asked data structure and algori
     - First position of target
     - Last position of target
     - Peak Index in a Mountain Array
+- **Breadth First Search**
+  - Single Queue Implementation Template
     
 ## Articles
 - [Algorithms — Two Pointers Template That Solves Many Problems](https://shawn-shi.medium.com/summary-notes-on-algorithms-two-pointers-c81735def5b2)
