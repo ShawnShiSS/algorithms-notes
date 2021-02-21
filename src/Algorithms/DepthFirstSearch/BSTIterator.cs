@@ -20,7 +20,7 @@ namespace Algorithms.DepthFirstSearch
         public BSTIterator(TreeNode root)
         {
             this._stack = new Stack<TreeNode>();
-            FillTowardsMostLeft(root);
+            FillTowardsMostLeftChild(root);
         }
 
         public int Next()
@@ -28,7 +28,7 @@ namespace Algorithms.DepthFirstSearch
             TreeNode current = _stack.Pop();
             if (current.RightChild != null)
             {
-                FillTowardsMostLeft(current.RightChild);
+                FillTowardsMostLeftChild(current.RightChild);
             }
 
             return current.Value;
@@ -43,7 +43,7 @@ namespace Algorithms.DepthFirstSearch
             return _stack.Count > 0;
         }
 
-        private void FillTowardsMostLeft(TreeNode root)
+        private void FillTowardsMostLeftChild(TreeNode root)
         {
             // NOTE 1: add node and all left children to the stack
             while (root != null)
