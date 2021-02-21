@@ -36,6 +36,9 @@ Organize the C# solutions to the most-frequently-asked data structure and algori
     - Peak Index in a Mountain Array
 - **Breadth First Search**
   - Single Queue Implementation Template
+- **Depth First Search** 
+  - DFS without recursion (using stack)
+    - [Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator/)
     
 ## Articles
 - [Algorithms — Two Pointers Template That Solves Many Problems](https://shawn-shi.medium.com/summary-notes-on-algorithms-two-pointers-c81735def5b2)
