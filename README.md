@@ -37,7 +37,7 @@ Organize the C# solutions to the most-frequently-asked data structure and algori
 - **Breadth First Search**
   - Single Queue Implementation Template
 - **Depth First Search** 
-  - DFS using stack
+  - DFS without recursion (using stack)
     - [Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator/)
     
 ## Articles
