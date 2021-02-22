@@ -7,6 +7,13 @@ namespace Algorithms.BreadthFirstSearch
 {
     public class BreadthFirstSearch
     {
+        // TODO: BFS template to enumearte a graph
+
+        /// <summary>
+        ///     BFS template to enumerate a tree
+        /// </summary>
+        /// <param name="root"></param>
+        /// <returns></returns>
         public List<List<int>> BfsTemplate(TreeNode root)
         {
             List<List<int>> result = new List<List<int>>();
