@@ -39,7 +39,7 @@ Organize the C# solutions to the most-frequently-asked data structure and algori
 - **Depth First Search** 
   - DFS without recursion (using stack)
     - [Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator/)
-  - DFS by enumeration with recursion
+  - DFS by enumeration with recursion plus backtracking
     - [Binary Tree Paths](https://leetcode.com/problems/binary-tree-paths/)  
     
 ## Articles
