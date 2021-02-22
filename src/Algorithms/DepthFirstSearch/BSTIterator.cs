@@ -9,6 +9,7 @@ namespace Algorithms.DepthFirstSearch
     ///     173. Binary Search Tree Iterator
     ///     Implement the BSTIterator class that represents an iterator over the in-order traversal of a binary search tree (BST)
     ///     https://leetcode.com/problems/binary-search-tree-iterator/
+    ///     This is a way to iterate a tree without using recursion.
     /// </summary>
     public class BSTIterator
     {
