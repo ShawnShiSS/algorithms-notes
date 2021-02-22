@@ -71,5 +71,40 @@ namespace Algorithms.DepthFirstSearch
                 BinaryTreePathsByEnumerationHelper(node.RightChild, path + "->" + node.RightChild.Value.ToString(), result);
             }
         }
+
+        /// <summary>
+        ///     Helper method to enumerate tree and add paths to result, with backtracking to improve call stack.
+        ///     Note: path is no longer a string but a List, so that we can use path as a shared variable for backtracking
+        /// </summary>
+        /// <param name="node"></param>
+        /// <param name="path"></param>
+        /// <param name="result"></param>
+        private void BinaryTreePathsByEnumerationHelperImproved(TreeNode node, List<int> path, IList<IList<int>> result)
+        {
+            if (node == null)
+            {
+                return;
+            }
+
+            // leaf
+            if (node.LeftChild == null && node.RightChild == null)
+            {
+                result.Add(path);
+            }
+
+            if (node.LeftChild != null)
+            {
+                path.Add(node.LeftChild.Value); // backtracking, add to the end of list
+                BinaryTreePathsByEnumerationHelperImproved(node.LeftChild, path, result);
+                path.RemoveAt(path.Count - 1); // backtracking, remove the last element in list
+            }
+
+            if (node.RightChild != null)
+            {
+                path.Add(node.RightChild.Value); // backtracking, add to the end of list
+                BinaryTreePathsByEnumerationHelperImproved(node.RightChild, path, result);
+                path.RemoveAt(path.Count - 1); // backtracking, remove the last element in list
+            }
+        }
     }
 }
