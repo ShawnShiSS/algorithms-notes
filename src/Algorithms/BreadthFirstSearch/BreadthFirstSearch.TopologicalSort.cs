@@ -48,15 +48,14 @@ namespace Algorithms.BreadthFirstSearch
                 if (!nodeToIndegree.ContainsKey(node))
                 {
                     queue.Enqueue(node);
+                    // also add to result
+                    result.Add(node);
                 }
             }
 
             while (queue.Count > 0)
             {
                 DirectedGraphNode current = queue.Dequeue();
-                // add to result
-                result.Add(current);
-
                 // process neighbours by removing the edges between current and neighbours
                 foreach (DirectedGraphNode neighbour in current.Neighbours)
                 {
