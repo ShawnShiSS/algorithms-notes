@@ -35,12 +35,15 @@ Organize the C# solutions to the most-frequently-asked data structure and algori
     - Last position of target
     - Peak Index in a Mountain Array
 - **Breadth First Search**
-  - Single Queue Implementation Template
+  - BFS template to enumerate a Tree using a single Queue
+  - BFS template to enumerate a Graph using a single Queue and a single Dictionary (TODO)
 - **Depth First Search** 
   - DFS without recursion (using stack)
     - [Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator/)
   - DFS by enumeration with recursion plus backtracking
     - [Binary Tree Paths](https://leetcode.com/problems/binary-tree-paths/)  
+- **Graph**
+  - Clone Graph (TODO) 
     
 ## Articles
 - [Algorithms — Two Pointers Template That Solves Many Problems](https://shawn-shi.medium.com/summary-notes-on-algorithms-two-pointers-c81735def5b2)
