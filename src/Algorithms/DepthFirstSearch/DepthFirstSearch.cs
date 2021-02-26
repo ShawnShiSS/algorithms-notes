@@ -153,7 +153,10 @@ namespace Algorithms.DepthFirstSearch
         ///     900. Closest Binary Search Tree Value.
         ///     Given a non-empty binary search tree and a target value, find the value in the BST that is closest to the target.
         ///     https://www.lintcode.com/problem/closest-binary-search-tree-value/
-        ///     Solution: find the largest value that is smaller than target, and find the smallest value that is larger than the target, then return the one closer to target.
+        ///     Solution: Divide and Conquer. 
+        ///         - Find the largest value that is smaller than target, 
+        ///         - and find the smallest value that is larger than the target, 
+        ///         - then return the one closer to target.
         /// </summary>
         /// <param name="root"></param>
         /// <param name="target"></param>
