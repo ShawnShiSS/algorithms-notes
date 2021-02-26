@@ -24,7 +24,7 @@ namespace Algorithms.DepthFirstSearch
 
             //Stack that holds all tree nodes whose right subtree has not been visited yet.
             Stack<TreeNode> stack = new Stack<TreeNode>();
-
+            // Initialize stack with root and left nodes
             FillTowardsMostLeftChild(stack, root);
 
             while(stack.Count > 0)
