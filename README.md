@@ -42,6 +42,7 @@ Organize the C# solutions to the most-frequently-asked data structure and algori
   - DFS without recursion (using stack)
     - Binary Search Tree In-Order Traversal Template Code 
     - [Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator/)
+    - [Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/)
   - DFS by enumeration with recursion plus backtracking
     - [Binary Tree Paths](https://leetcode.com/problems/binary-tree-paths/)  
 - **Graph**
