@@ -15,11 +15,11 @@ Organize the C# solutions to the most-frequently-asked data structure and algori
     - Valid Palindrome
     - Valid Palindrome II
     - Two Sum
-    - [Sort Colors](https://leetcode.com/problems/sort-colors/)
-    - [Rainbow Sort, AKA, Sort K Colors](https://www.lintcode.com/problem/143/)
-    - [Three Sum](https://leetcode.com/problems/3sum/)
-    - [Partition Array](https://www.lintcode.com/problem/partition-array/)
-    - [Move Zeros](https://leetcode.com/problems/move-zeroes/)
+    - [Leetcode: Sort Colors](https://leetcode.com/problems/sort-colors/)
+    - [Lintcode: Rainbow Sort, AKA, Sort K Colors](https://www.lintcode.com/problem/143/)
+    - [Leetcode: Three Sum](https://leetcode.com/problems/3sum/)
+    - [Lintcode: Partition Array](https://www.lintcode.com/problem/partition-array/)
+    - [Leetcode: Move Zeros](https://leetcode.com/problems/move-zeroes/)
   - Opposite Direction
 - **Sorting**
   - Quick Sort
@@ -41,10 +41,10 @@ Organize the C# solutions to the most-frequently-asked data structure and algori
 - **Depth First Search** 
   - DFS without recursion (using stack)
     - Binary Search Tree In-Order Traversal Template Code 
-    - [Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator/)
-    - [Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/)
+    - [Leetcode: Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator/)
+    - [Leetcode: Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/)
   - DFS traversal with recursion plus backtracking
-    - [Binary Tree Paths](https://leetcode.com/problems/binary-tree-paths/)  
+    - [Leetcode: Binary Tree Paths](https://leetcode.com/problems/binary-tree-paths/)  
 - **Graph**
   - Clone Graph (TODO) 
     
