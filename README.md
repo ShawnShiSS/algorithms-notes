@@ -44,9 +44,12 @@ Organize the C# solutions to the most-frequently-asked data structure and algori
     - [Leetcode: Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator/)
     - [Leetcode: Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/)
   - DFS template for tree structure with recursion plus backtracking
+    - This template solves DFS problems on tree structures
     - [Leetcode: Binary Tree Paths](https://leetcode.com/problems/binary-tree-paths/)  
   - DFS template for non-tree structure with recursion plus backtracking
-    -  [Leetcode: Subsets](https://leetcode.com/problems/subsets/)
+    - This will solve combination type questions on non-tree structures. E.g. searching for all possible combinations
+    - [Leetcode: Subsets](https://leetcode.com/problems/subsets/)
+    - [Leetcode: Subsets ii](https://leetcode.com/problems/subsets-ii/)
 - **Graph**
   - Clone Graph (TODO) 
     
