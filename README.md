@@ -43,8 +43,10 @@ Organize the C# solutions to the most-frequently-asked data structure and algori
     - Binary Search Tree In-Order Traversal Template Code 
     - [Leetcode: Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator/)
     - [Leetcode: Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/)
-  - DFS traversal with recursion plus backtracking
+  - DFS template for tree structure with recursion plus backtracking
     - [Leetcode: Binary Tree Paths](https://leetcode.com/problems/binary-tree-paths/)  
+  - DFS template for non-tree structure with recursion plus backtracking
+    -  [Leetcode: Subsets](https://leetcode.com/problems/subsets/)
 - **Graph**
   - Clone Graph (TODO) 
     
