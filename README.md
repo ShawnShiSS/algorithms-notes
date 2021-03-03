@@ -47,9 +47,11 @@ Organize the C# solutions to the most-frequently-asked data structure and algori
     - This template solves DFS problems on tree structures
     - [Leetcode: Binary Tree Paths](https://leetcode.com/problems/binary-tree-paths/)  
   - DFS template for non-tree structure with recursion plus backtracking
-    - This will solve combination type questions on non-tree structures. E.g. searching for all possible combinations
+    - Template code for combination type questions on non-tree structures. E.g. searching for all possible combinations
     - [Leetcode: Subsets](https://leetcode.com/problems/subsets/)
     - [Leetcode: Subsets ii](https://leetcode.com/problems/subsets-ii/)
+    - Template code for permutation type questions. E.g., search all permutations
+    - [LeetCode: Permutations](https://leetcode.com/problems/permutations/)
 - **Graph**
   - Clone Graph (TODO) 
     
