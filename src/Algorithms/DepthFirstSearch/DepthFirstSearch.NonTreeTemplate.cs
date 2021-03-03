@@ -5,7 +5,9 @@ using System.Text;
 namespace Algorithms.DepthFirstSearch
 {
     /// <summary>
-    ///     Using DFS to solve combination type questions, e.g. subsets
+    ///     Using DFS to solve 
+    ///         - combination type questions, e.g. subsets
+    ///         - permutation type questions
     /// </summary>
     public partial class DepthFirstSearch
     {
@@ -182,6 +184,79 @@ namespace Algorithms.DepthFirstSearch
                 subset.RemoveAt(subset.Count - 1);
             }
 
+        }
+
+
+        /// <summary>
+        ///     46. Permutations
+        ///     Given an array nums of distinct integers, return all the possible permutations. You can return the answer in any order.
+        ///     https://leetcode.com/problems/permutations/
+        ///     Solution: DFS using template
+        /// </summary>
+        /// <param name="nums"></param>
+        /// <returns></returns>
+        public IList<IList<int>> Permute(int[] nums)
+        {
+            IList<IList<int>> permutations = new List<IList<int>>();
+            // track the numbers being used by the current permutation
+            HashSet<int> numbersUsed = new HashSet<int>();
+
+            // Edge case
+            if (nums == null)
+            {
+                // return [], not [[]] for empty nums
+                return permutations;
+            }
+
+            // sort array : not required
+            Array.Sort(nums);
+
+            // DFS search
+            DfsPermutationWithoutDuplicatesTemplateHelper(nums, numbersUsed, new List<int>(), permutations);
+
+            return permutations;
+        }
+
+        /// <summary>
+        ///     DFS search for all the permutations starting with input permutation
+        /// </summary>
+        /// <param name="nums"></param>
+        /// <param name="numbersUsed"></param>
+        /// <param name="permutation">Current permutation</param>
+        /// <param name="result"></param>
+        private void DfsPermutationWithoutDuplicatesTemplateHelper(int[] nums,
+                                                                   HashSet<int> numbersUsed,
+                                                                   IList<int> permutation,
+                                                                   IList<IList<int>> permutations)
+        {
+            // exit
+            // must deep copy instead of passing in the reference
+            // only add to result when all numbers are used
+            if (nums.Length == permutation.Count)
+            {
+                permutations.Add(new List<int>(permutation));
+            }
+
+            // DFS with recursion
+            // Need to look at all numbers, but not from a startIndex like combination questions
+            for(int i = 0; i < nums.Length; i++)
+            {
+                // skip numbers already in the current permutation
+                if (numbersUsed.Contains(nums[i]))
+                {
+                    continue;
+                }
+
+                // add current number to current permutation and track it
+                numbersUsed.Add(nums[i]);
+                permutation.Add(nums[i]);
+                DfsPermutationWithoutDuplicatesTemplateHelper(nums, numbersUsed, permutation, permutations);
+
+                // backtracking
+                numbersUsed.Remove(nums[i]);
+                permutation.RemoveAt(permutation.Count - 1);
+
+            }
         }
     }
 }
