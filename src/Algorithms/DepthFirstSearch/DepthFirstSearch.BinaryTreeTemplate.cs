@@ -7,8 +7,8 @@ namespace Algorithms.DepthFirstSearch
 {
     /// <summary>
     ///     DFS search templates for binary trees
-    ///         - Traversal on Binary Tree
-    ///         - Divide and Conquer on Binary Tree
+    ///         - Traversal on Binary Tree: track result as a param
+    ///         - Divide and Conquer on Binary Tree: use return value as the result
     /// </summary>
     public partial class DepthFirstSearch
     {
