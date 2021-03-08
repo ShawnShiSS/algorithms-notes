@@ -6,7 +6,7 @@ using System.Text;
 namespace Algorithms.DepthFirstSearch
 {
     /// <summary>
-    ///     DFS search templates for N-ary search tree
+    ///     DFS search templates for Binary search tree
     ///         - traversal on trees using Stack without recursion
     /// </summary>
     public partial class DepthFirstSearch
