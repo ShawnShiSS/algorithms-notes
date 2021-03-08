@@ -231,5 +231,44 @@ namespace Algorithms.DepthFirstSearch
         {
             throw new NotImplementedException();
         }
+
+
+        /// <summary>
+        ///     120. Triangle
+        ///     Given a triangle array, return the minimum path sum from top to bottom.
+        ///     For each step, you may move to an adjacent number of the row below. 
+        ///     More formally, if you are on index i on the current row, you may move to either index i or index i + 1 on the next row.
+        ///     https://leetcode.com/problems/triangle/description/
+        ///     Solution 1: DFS with recursion, O(2^n), as there are 2^n paths in total
+        /// </summary>
+        /// <param name="triangle"></param>
+        /// <returns></returns>
+        public int TriangleMinimumTotal(IList<IList<int>> triangle)
+        {
+            // edge case
+            if (triangle == null || triangle.Count == 0)
+            {
+                return 0;
+            }
+
+            return DFSHelperUsingDivideAndConquer(triangle, 0, 0);           
+        }
+
+        private int DFSHelperUsingDivideAndConquer(IList<IList<int>> triangle,
+                                                   int x, 
+                                                   int y)
+        {
+            // exit : x being out of bound
+            if (x == triangle.Count)
+            {
+                return 0;
+            }
+
+            // Divide and Conquer
+            int leftSubTriangleMin = DFSHelperUsingDivideAndConquer(triangle, x + 1, y);
+            int rightSubTriangleMin = DFSHelperUsingDivideAndConquer(triangle, x + 1, y + 1);
+
+            return Math.Min(leftSubTriangleMin, rightSubTriangleMin) + triangle[x][y];
+        }
     }
 }
