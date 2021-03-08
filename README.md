@@ -40,14 +40,13 @@ Organize the C# solutions to the most-frequently-asked data structure and algori
     - [Topological Sorting](https://www.lintcode.com/problem/topological-sorting/)
 - **Depth First Search** 
   - DFS without recursion (using stack)
-    - Binary Search Tree In-Order Traversal Template Code 
+    - Binary Search Tree In-Order Traversal Template Code using Stack
     - [Leetcode: Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator/)
     - [Leetcode: Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/)
-  - DFS template for tree structure with recursion plus backtracking
-    - This template solves DFS problems on tree structures
+  - DFS template for binary trees with recursion plus backtracking
     - [Leetcode: Binary Tree Paths](https://leetcode.com/problems/binary-tree-paths/)  
     - [Leetcode: Triangle](https://leetcode.com/problems/triangle/)
-  - DFS template for non-tree structure with recursion plus backtracking
+  - DFS template for N-ary search trees with recursion plus backtracking
     - Template code for combination type questions on non-tree structures. E.g. searching for all possible combinations
     - [Leetcode: Subsets](https://leetcode.com/problems/subsets/)
     - [Leetcode: Subsets ii](https://leetcode.com/problems/subsets-ii/)
