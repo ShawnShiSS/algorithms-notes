@@ -234,6 +234,7 @@ namespace Algorithms.DepthFirstSearch
 
 
         /// <summary>
+        ///     NOTE: this is not a binary tree problem.
         ///     120. Triangle
         ///     Given a triangle array, return the minimum path sum from top to bottom.
         ///     For each step, you may move to an adjacent number of the row below. 
@@ -245,15 +246,19 @@ namespace Algorithms.DepthFirstSearch
         /// <returns></returns>
         public int TriangleMinimumTotal(IList<IList<int>> triangle)
         {
-            // edge case
-            if (triangle == null || triangle.Count == 0)
-            {
-                return 0;
-            }
+            //return DFSHelperUsingDivideAndConquer(triangle, 0, 0);           
 
-            return DFSHelperUsingDivideAndConquer(triangle, 0, 0);           
+            // improved solution with memorized search
+            return DFSHelperUsingDivideAndConquerWithMemory(triangle, 0, 0, new Dictionary<string, int>());
         }
 
+        /// <summary>
+        ///     DFS helper on a triangle array, without memory
+        /// </summary>
+        /// <param name="triangle"></param>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <returns>Minimum path sum from coordinate [x,y] to the bottom</returns>
         private int DFSHelperUsingDivideAndConquer(IList<IList<int>> triangle,
                                                    int x, 
                                                    int y)
@@ -269,6 +274,42 @@ namespace Algorithms.DepthFirstSearch
             int rightSubTriangleMin = DFSHelperUsingDivideAndConquer(triangle, x + 1, y + 1);
 
             return Math.Min(leftSubTriangleMin, rightSubTriangleMin) + triangle[x][y];
+        }
+
+        /// <summary>
+        ///     DFS helper on a triangle array, using memorized search
+        /// </summary>
+        /// <param name="triangle"></param>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <param name="memory">Memory that maps path to path sum</param>
+        /// <returns>The minimum path sum from [x,y] to the bottom</returns>
+        private int DFSHelperUsingDivideAndConquerWithMemory(IList<IList<int>> triangle,
+                                                             int x,
+                                                             int y,
+                                                             Dictionary<string, int> memory)
+        {
+            // exit : x being out of bound
+            if (x == triangle.Count)
+            {
+                return 0;
+            }
+
+            // TODO: improve the string manipulation here by creating Coordinate class with x&y property
+            // if we have already calculated the sum for the path, just return it
+            string coordinateStr = x + "->" + y;
+            if (memory.ContainsKey(coordinateStr))
+            {
+                return memory[coordinateStr];
+            }
+
+            // Divide and Conquer
+            int leftSubTriangleMin = DFSHelperUsingDivideAndConquerWithMemory(triangle, x + 1, y, memory);
+            int rightSubTriangleMin = DFSHelperUsingDivideAndConquerWithMemory(triangle, x + 1, y + 1, memory);
+
+            //
+            memory.Add(coordinateStr, Math.Min(leftSubTriangleMin, rightSubTriangleMin) + triangle[x][y]);
+            return memory[coordinateStr];
         }
     }
 }
