@@ -83,5 +83,48 @@ namespace Algorithms.DynamicProgramming
             return minTotal;
 
         }
+
+        /// <summary>
+        ///     62. Unique Paths
+        ///     A robot is located at the top-left corner of a m x n grid (marked 'Start' in the diagram below).
+        ///     The robot can only move either down or right at any point in time.The robot is trying to reach the bottom-right corner of the grid(marked 'Finish' in the diagram below).
+        ///     How many possible unique paths are there?
+        ///     https://leetcode.com/problems/unique-paths/
+        ///     Solution: dynamic programming
+        /// </summary>
+        /// <param name="rowCount"></param>
+        /// <param name="colCount"></param>
+        /// <returns></returns>
+        public int UniquePaths(int rowCount, int colCount)
+        {
+            // DP state: jagged array dp[i][j] = unique paths from start to i,j
+            int[][] uniquePaths = new int[rowCount][];
+            for(int i = 0; i < rowCount; i++)
+            {
+                uniquePaths[i] = new int[colCount];
+            }
+
+            // DP initialization: starting point and boundary lines
+            for (int row = 0; row < rowCount; row++)
+            {
+                uniquePaths[row][0] = 1;
+            }
+            for (int col = 0; col < colCount; col++)
+            {
+                uniquePaths[0][col] = 1;
+            }
+
+            // DP function: break down problem
+            for (int row = 1; row < rowCount; row++)
+            {
+                for (int col = 1; col < colCount; col++)
+                {
+                    uniquePaths[row][col] = uniquePaths[row - 1][col] + uniquePaths[row][col - 1];
+                }
+            }
+
+            // DP answer: finishing point
+            return uniquePaths[rowCount - 1][colCount - 1];
+        }
     }
 }
