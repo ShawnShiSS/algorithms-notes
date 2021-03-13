@@ -60,10 +60,12 @@ Organize the C# solutions to the most-frequently-asked data structure and algori
   - Introduction 
     - [Leetcode: Triangle](https://leetcode.com/problems/triangle/)   
     - [LeetCode: Unique Paths](https://leetcode.com/problems/unique-paths/submissions/)
+    - [LeetCode: Unique Paths II with Obstacles](https://leetcode.com/problems/unique-paths-ii/submissions/)
 
 ## Articles
 - [Algorithms — Two Pointers Template That Solves Many Problems](https://shawn-shi.medium.com/summary-notes-on-algorithms-two-pointers-c81735def5b2)
 - [Algorithms — Binary Search Template That Can Solve Lots of Problems](https://shawn-shi.medium.com/summary-notes-on-algorithms-binary-search-template-using-two-pointers-347fbb6263a9)
+- TODO : Algorithms - Master Breadth First Search Template Code with 5 Problems 
 
 ## Sample images
 <img src="https://github.com/ShawnShiSS/algorithms-notes/blob/main/src/Algorithms/Uploads/Heap%20vs%20Stack%20storage.jpg" width="520" height="200">
