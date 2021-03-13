@@ -126,5 +126,77 @@ namespace Algorithms.DynamicProgramming
             // DP answer: finishing point
             return uniquePaths[rowCount - 1][colCount - 1];
         }
+
+        /// <summary>
+        ///     63. Unique Paths II
+        ///     A robot is located at the top-left corner of a m x n grid (marked 'Start' in the diagram below).
+        ///     The robot can only move either down or right at any point in time.The robot is trying to reach the bottom-right corner of the grid(marked 'Finish' in the diagram below).
+        ///     Now consider if some obstacles are added to the grids.How many unique paths would there be?
+        ///     An obstacle and space is marked as 1 and 0 respectively in the grid.
+        ///     https://leetcode.com/problems/unique-paths/
+        ///     Solution: dynamic programming
+        /// </summary>
+        /// <param name="rowCount"></param>
+        /// <param name="colCount"></param>
+        /// <returns></returns>
+        public int UniquePathsWithObstacles(int[][] obstacleGrid)
+        {
+            // edge case
+            if (obstacleGrid == null || 
+                obstacleGrid.Length == 0 || 
+                obstacleGrid[0].Length == 0)
+            {
+                return -1;
+            }
+
+            int rowCount = obstacleGrid.Length;
+            int colCount = obstacleGrid[0].Length;
+
+            // DP state: jagged array dp[i][j] = unique paths from start to i,j
+            int[][] uniquePaths = new int[rowCount][];
+            for (int i = 0; i < rowCount; i++)
+            {
+                uniquePaths[i] = new int[colCount];
+            }
+
+            // DP initialization: starting point and boundary lines
+            for (int row = 0; row < rowCount; row++)
+            {
+                // Stop when running into an obstacle
+                if (obstacleGrid[row][0] == 1)
+                {
+                    break;
+                }
+                uniquePaths[row][0] = 1;
+            }
+            for (int col = 0; col < colCount; col++)
+            {
+                // Stop when running into an obstacle
+                if (obstacleGrid[0][col] == 1)
+                {
+                    break;
+                }
+                uniquePaths[0][col] = 1;
+            }
+
+            // DP function: break down problem
+            for (int row = 1; row < rowCount; row++)
+            {
+                for (int col = 1; col < colCount; col++)
+                {
+                    // Obstacle's unique paths should be 0
+                    if (obstacleGrid[row][col] == 1)
+                    {
+                        continue;
+                    }    
+
+                    uniquePaths[row][col] = uniquePaths[row - 1][col] + uniquePaths[row][col - 1];
+                }
+            }
+
+            // DP answer: finishing point
+            return uniquePaths[rowCount - 1][colCount - 1];
+        }
+
     }
 }
