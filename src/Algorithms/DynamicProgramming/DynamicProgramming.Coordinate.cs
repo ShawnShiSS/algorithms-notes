@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Algorithms.DynamicProgramming
 {
-    public class DynamicProgramming
+    public partial class DynamicProgramming
     {
         /// <summary>
         ///     NOTE: Number triangle is not a binary tree.
