@@ -1,5 +1,5 @@
 # Algorithms Notes in C#
-Summary notes on top interview questions on data structures and algorithms in C# for study purpose.
+Summary notes on how to apply template code for algorithms on top interview questions on data structures and algorithms in C# for study purpose.
 
 ## Goal
 Organize the C# solutions to the most-frequently-asked data structure and algorithms questions by category, with heavy comments on
