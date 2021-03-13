@@ -198,5 +198,93 @@ namespace Algorithms.DynamicProgramming
             return uniquePaths[rowCount - 1][colCount - 1];
         }
 
+        /// <summary>
+        ///     630. Knight Shortest Path II
+        ///     Given a knight in a chessboard n * m (a binary matrix with 0 as empty and 1 as barrier). the knight initialze position is (0, 0) and he wants to reach position (n - 1, m - 1), Knight can only be from left to right. Find the shortest path to the destination position, return the length of the route. Return -1 if knight can not reached.
+        ///     If the knight is at (x, y), he can get to the following positions in one step:
+        ///     (x + 1, y + 2)
+        ///     (x - 1, y + 2)
+        ///     (x + 2, y + 1)
+        ///     (x - 2, y + 1)
+        ///     https://www.lintcode.com/problem/630/
+        ///     Solution: Dynamic Programming with coordinates
+        /// </summary>
+        /// <param name="grid"></param>
+        /// <returns></returns>
+        public int KnightShortestPathII(bool[][] grid)
+        {
+            // edge case
+            if (grid == null || 
+                grid.Length == 0 || 
+                grid[0].Length == 0)
+            {
+                return -1;
+            }
+
+            int rowCount = grid.Length;
+            int colCount = grid.Length;
+
+            // DP state: shortest path from 0,0 to i,j
+            int[][] shortestPaths = new int[rowCount][colCount];
+            // default values: max value of int
+            for (int row = 0; row < rowCount; row++)
+            {
+                for (int col = 0; col < colCount; col++)
+                {
+                    shortestPaths[row][col] = int.MaxValue;
+                }
+            }
+
+            // DP initialization: starting point
+            shortestPaths[0][0] = 0;
+
+            // DP function: break down the problem
+            int[] deltaX = new int[] { -1, 1, -2, 2 };
+            int[] deltaY = new int[] { -2, -2, -1, -1 };
+
+            for (int row = 0; row < rowCount; row++)
+            {
+                for (int col = 0; col < colCount; col++)
+                {
+                    // Check for obstacle
+                    if (grid[row][col] == 1)
+                    {
+                        continue;
+                    }
+
+                    // Check four direction
+                    for (int delta = 0; delta < deltaX.Length; delta++)
+                    {
+                        int x = row + deltaX[delta];
+                        int y = col + deltaY[delta];
+
+                        // Check for out of bound
+                        // (0 <= x < rowCount && 0 <= y < colCount)
+                        if (x < 0 ||
+                            x >= rowCount || 
+                            y < 0 ||
+                            y >= colCount)
+                        {
+                            continue;
+                        }
+
+                        // Check whether x,y is an obstacle
+                        if (shortestPaths[x][y] == int.MaxValue)
+                        {
+                            continue;
+                        }
+
+                        shortestPaths[row][col] = Math.Min(shortestPaths[x][y] + 1, shortestPaths[row][col]);
+                    }
+                }
+            }
+
+            if (shortestPaths[rowCount - 1][colCount - 1] == int.MaxValue)
+            {
+                return -1;
+            }
+
+            return shortestPaths[rowCount - 1][colCount - 1];
+        }
     }
 }
