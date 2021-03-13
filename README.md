@@ -53,12 +53,13 @@ Organize the C# solutions to the most-frequently-asked data structure and algori
     - Template code for permutation type questions. E.g., search all permutations
     - [LeetCode: Permutations](https://leetcode.com/problems/permutations/)
   - DFS with memory
-    - [Leetcode Triangle](https://leetcode.com/problems/triangle/)  
+    - [Leetcode: Triangle](https://leetcode.com/problems/triangle/)  
 - **Graph**
   - Clone Graph (TODO) 
 - **Dynamic Programming**
   - Introduction 
-    - [Leetcode Triangle](https://leetcode.com/problems/triangle/)   
+    - [Leetcode: Triangle](https://leetcode.com/problems/triangle/)   
+    - [LeetCode: Unique Paths](https://leetcode.com/problems/unique-paths/submissions/)
 
 ## Articles
 - [Algorithms — Two Pointers Template That Solves Many Problems](https://shawn-shi.medium.com/summary-notes-on-algorithms-two-pointers-c81735def5b2)
