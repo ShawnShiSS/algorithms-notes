@@ -242,9 +242,10 @@ namespace Algorithms.DynamicProgramming
             int[] deltaX = new int[] { -1, 1, -2, 2 };
             int[] deltaY = new int[] { -2, -2, -1, -1 };
 
-            for (int row = 0; row < rowCount; row++)
+            // Note: because the knight moves left to right, we must loop col first
+            for (int col = 0; col < colCount; col++)
             {
-                for (int col = 0; col < colCount; col++)
+                for (int row = 0; row < rowCount; row++)
                 {
                     // Check for obstacle
                     if (grid[row][col] == 1)
