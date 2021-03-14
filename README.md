@@ -12,14 +12,14 @@ Organize the C# solutions to the most-frequently-asked data structure and algori
 - **Two Pointers**
   - Same Direction
   - Facing Direction
-    - Valid Palindrome
-    - Valid Palindrome II
-    - Two Sum
-    - [Leetcode: Sort Colors](https://leetcode.com/problems/sort-colors/)
-    - [Lintcode: Rainbow Sort, AKA, Sort K Colors](https://www.lintcode.com/problem/143/)
-    - [Leetcode: Three Sum](https://leetcode.com/problems/3sum/)
-    - [Lintcode: Partition Array](https://www.lintcode.com/problem/partition-array/)
-    - [Leetcode: Move Zeros](https://leetcode.com/problems/move-zeroes/)
+    - [LeetCode: Valid Palindrome](https://leetcode.com/problems/valid-palindrome/), see notes in [TwoPointers.FacingDirection.cs](https://github.com/ShawnShiSS/algorithms-notes/blob/main/src/Algorithms/TwoPointers/TwoPointers.FacingDirection.cs)
+    - [Valid Palindrome II](https://leetcode.com/problems/valid-palindrome-ii/), see notes in [TwoPointers.FacingDirection.cs](https://github.com/ShawnShiSS/algorithms-notes/blob/main/src/Algorithms/TwoPointers/TwoPointers.FacingDirection.cs)
+    - [LeetCode: Two Sum](https://leetcode.com/problems/two-sum/), see notes in [TwoPointers.FacingDirection.cs](https://github.com/ShawnShiSS/algorithms-notes/blob/main/src/Algorithms/TwoPointers/TwoPointers.FacingDirection.cs)
+    - [Leetcode: Three Sum](https://leetcode.com/problems/3sum/), see notes in [TwoPointers.FacingDirection.cs](https://github.com/ShawnShiSS/algorithms-notes/blob/main/src/Algorithms/TwoPointers/TwoPointers.FacingDirection.cs)
+    - [Leetcode: Sort Colors](https://leetcode.com/problems/sort-colors/), see notes in [TwoPointers.FacingDirection.PartitionType.cs](https://github.com/ShawnShiSS/algorithms-notes/blob/main/src/Algorithms/TwoPointers/TwoPointers.FacingDirection.PartitionType.cs)
+    - [Lintcode: Rainbow Sort, AKA, Sort K Colors](https://www.lintcode.com/problem/143/), see notes in [TwoPointers.FacingDirection.PartitionType.cs](https://github.com/ShawnShiSS/algorithms-notes/blob/main/src/Algorithms/TwoPointers/TwoPointers.FacingDirection.PartitionType.cs)
+    - [Lintcode: Partition Array](https://www.lintcode.com/problem/partition-array/), see notes in [TwoPointers.FacingDirection.PartitionType.cs](https://github.com/ShawnShiSS/algorithms-notes/blob/main/src/Algorithms/TwoPointers/TwoPointers.FacingDirection.PartitionType.cs)
+    - [Leetcode: Move Zeros](https://leetcode.com/problems/move-zeroes/), see notes in [TwoPointers.FacingDirection.PartitionType.cs](https://github.com/ShawnShiSS/algorithms-notes/blob/main/src/Algorithms/TwoPointers/TwoPointers.FacingDirection.PartitionType.cs)
   - Opposite Direction
 - **Sorting**
   - Quick Sort
@@ -53,15 +53,16 @@ Organize the C# solutions to the most-frequently-asked data structure and algori
     - Template code for permutation type questions. E.g., search all permutations
     - [LeetCode: Permutations](https://leetcode.com/problems/permutations/)
   - DFS with memory
-    - [Leetcode: Triangle](https://leetcode.com/problems/triangle/)  
+    - [Leetcode: Triangle](https://leetcode.com/problems/triangle/), see notes in [DepthFirstSearch.BinaryTreeRecursionTemplate.cs](https://github.com/ShawnShiSS/algorithms-notes/blob/main/src/Algorithms/DepthFirstSearch/DepthFirstSearch.BinaryTreeRecursionTemplate.cs)  
 - **Graph**
   - Clone Graph (TODO) 
 - **Dynamic Programming**
   - Coordinates Type 
-    - [Leetcode: Triangle](https://leetcode.com/problems/triangle/)   
-    - [LeetCode: Unique Paths](https://leetcode.com/problems/unique-paths/submissions/)
-    - [LeetCode: Unique Paths II with Obstacles](https://leetcode.com/problems/unique-paths-ii/submissions/)
+    - [Leetcode: Triangle](https://leetcode.com/problems/triangle/), see notes in [DynamicProgramming.cs](https://github.com/ShawnShiSS/algorithms-notes/blob/main/src/Algorithms/DynamicProgramming/DynamicProgramming.Coordinate.cs)
+    - [LeetCode: Unique Paths](https://leetcode.com/problems/unique-paths/submissions/), see notes in [DynamicProgramming.cs](https://github.com/ShawnShiSS/algorithms-notes/blob/main/src/Algorithms/DynamicProgramming/DynamicProgramming.Coordinate.cs)
+    - [LeetCode: Unique Paths II with Obstacles](https://leetcode.com/problems/unique-paths-ii/submissions/), see notes in [DynamicProgramming.cs](https://github.com/ShawnShiSS/algorithms-notes/blob/main/src/Algorithms/DynamicProgramming/DynamicProgramming.Coordinate.cs)
     - [LintCode: Knight Shortest Path II](https://www.lintcode.com/problem/630/), see notes in [DynamicProgramming.cs](https://github.com/ShawnShiSS/algorithms-notes/blob/main/src/Algorithms/DynamicProgramming/DynamicProgramming.Coordinate.cs)
+    - [LeetCode: Jump Game](https://leetcode.com/problems/jump-game/), see notes in [DynamicProgramming.cs](https://github.com/ShawnShiSS/algorithms-notes/blob/main/src/Algorithms/DynamicProgramming/DynamicProgramming.Coordinate.cs)
 
 ## Articles
 - [Algorithms — Two Pointers Template That Solves Many Problems](https://shawn-shi.medium.com/summary-notes-on-algorithms-two-pointers-c81735def5b2)
