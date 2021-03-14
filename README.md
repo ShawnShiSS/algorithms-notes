@@ -15,11 +15,11 @@ Organize the C# solutions to the most-frequently-asked data structure and algori
     - [LeetCode: Valid Palindrome](https://leetcode.com/problems/valid-palindrome/), see notes in [TwoPointers.FacingDirection.cs](https://github.com/ShawnShiSS/algorithms-notes/blob/main/src/Algorithms/TwoPointers/TwoPointers.FacingDirection.cs)
     - [Valid Palindrome II](https://leetcode.com/problems/valid-palindrome-ii/), see notes in [TwoPointers.FacingDirection.cs](https://github.com/ShawnShiSS/algorithms-notes/blob/main/src/Algorithms/TwoPointers/TwoPointers.FacingDirection.cs)
     - [LeetCode: Two Sum](https://leetcode.com/problems/two-sum/), see notes in [TwoPointers.FacingDirection.cs](https://github.com/ShawnShiSS/algorithms-notes/blob/main/src/Algorithms/TwoPointers/TwoPointers.FacingDirection.cs)
-    - [Leetcode: Sort Colors](https://leetcode.com/problems/sort-colors/)
-    - [Lintcode: Rainbow Sort, AKA, Sort K Colors](https://www.lintcode.com/problem/143/)
-    - [Leetcode: Three Sum](https://leetcode.com/problems/3sum/)
-    - [Lintcode: Partition Array](https://www.lintcode.com/problem/partition-array/)
-    - [Leetcode: Move Zeros](https://leetcode.com/problems/move-zeroes/)
+    - [Leetcode: Three Sum](https://leetcode.com/problems/3sum/), see notes in [TwoPointers.FacingDirection.cs](https://github.com/ShawnShiSS/algorithms-notes/blob/main/src/Algorithms/TwoPointers/TwoPointers.FacingDirection.cs)
+    - [Leetcode: Sort Colors](https://leetcode.com/problems/sort-colors/), see notes in [TwoPointers.FacingDirection.PartitionType.cs](https://github.com/ShawnShiSS/algorithms-notes/blob/main/src/Algorithms/TwoPointers/TwoPointers.FacingDirection.PartitionType.cs)
+    - [Lintcode: Rainbow Sort, AKA, Sort K Colors](https://www.lintcode.com/problem/143/), see notes in [TwoPointers.FacingDirection.PartitionType.cs](https://github.com/ShawnShiSS/algorithms-notes/blob/main/src/Algorithms/TwoPointers/TwoPointers.FacingDirection.PartitionType.cs)
+    - [Lintcode: Partition Array](https://www.lintcode.com/problem/partition-array/), see notes in [TwoPointers.FacingDirection.PartitionType.cs](https://github.com/ShawnShiSS/algorithms-notes/blob/main/src/Algorithms/TwoPointers/TwoPointers.FacingDirection.PartitionType.cs)
+    - [Leetcode: Move Zeros](https://leetcode.com/problems/move-zeroes/), see notes in [TwoPointers.FacingDirection.PartitionType.cs](https://github.com/ShawnShiSS/algorithms-notes/blob/main/src/Algorithms/TwoPointers/TwoPointers.FacingDirection.PartitionType.cs)
   - Opposite Direction
 - **Sorting**
   - Quick Sort
