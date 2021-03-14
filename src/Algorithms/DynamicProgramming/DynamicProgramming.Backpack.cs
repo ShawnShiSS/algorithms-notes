@@ -22,8 +22,9 @@ namespace Algorithms.DynamicProgramming
         {
             int itemCount = items.Length;
 
-            // DP state: dp[i][j] whether the first i items can create a sum = j
-            // Note: need to also track 0 item can create sum = 0, thun itemCount+1 below
+            // DP state: dp[i][j] whether the first i items can fill up to sum = j
+            // Need to track 0 item, thus itemCount + 1
+            // Need to track size = 0, thus backpackSize + 1
             bool[][] dp = new bool[itemCount + 1][];
             for (int i = 0; i < dp.Length; i++)
             {

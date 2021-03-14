@@ -4,6 +4,9 @@ using System.Text;
 
 namespace Algorithms.DynamicProgramming
 {
+    /// <summary>
+    ///     A collection of problems that can be solved by DP
+    /// </summary>
     public partial class DynamicProgramming
     {
     }
