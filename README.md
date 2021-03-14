@@ -53,7 +53,7 @@ Organize the C# solutions to the most-frequently-asked data structure and algori
     - Template code for permutation type questions. E.g., search all permutations
     - [LeetCode: Permutations](https://leetcode.com/problems/permutations/)
   - DFS with memory
-    - [Leetcode: Triangle](https://leetcode.com/problems/triangle/)  
+    - [Leetcode: Triangle](https://leetcode.com/problems/triangle/), see notes in [DepthFirstSearch.BinaryTreeRecursionTemplate.cs](https://github.com/ShawnShiSS/algorithms-notes/blob/main/src/Algorithms/DepthFirstSearch/DepthFirstSearch.BinaryTreeRecursionTemplate.cs)  
 - **Graph**
   - Clone Graph (TODO) 
 - **Dynamic Programming**
