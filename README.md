@@ -1,5 +1,5 @@
 # Algorithms Notes in C#
-Summary notes on top interview questions on data structures and algorithms in C# for study purpose.
+Summary notes on how to apply template code for algorithms on top interview questions on data structures and algorithms in C# for study purpose.
 
 ## Goal
 Organize the C# solutions to the most-frequently-asked data structure and algorithms questions by category, with heavy comments on
@@ -57,10 +57,11 @@ Organize the C# solutions to the most-frequently-asked data structure and algori
 - **Graph**
   - Clone Graph (TODO) 
 - **Dynamic Programming**
-  - Introduction 
+  - Coordinates Type 
     - [Leetcode: Triangle](https://leetcode.com/problems/triangle/)   
     - [LeetCode: Unique Paths](https://leetcode.com/problems/unique-paths/submissions/)
     - [LeetCode: Unique Paths II with Obstacles](https://leetcode.com/problems/unique-paths-ii/submissions/)
+    - [LintCode: Knight Shortest Path II](https://www.lintcode.com/problem/630/), see notes in [DynamicProgramming.cs](https://github.com/ShawnShiSS/algorithms-notes/blob/main/src/Algorithms/DynamicProgramming/DynamicProgramming.Coordinate.cs)
 
 ## Articles
 - [Algorithms — Two Pointers Template That Solves Many Problems](https://shawn-shi.medium.com/summary-notes-on-algorithms-two-pointers-c81735def5b2)
