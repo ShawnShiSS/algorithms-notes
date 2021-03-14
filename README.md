@@ -58,9 +58,9 @@ Organize the C# solutions to the most-frequently-asked data structure and algori
   - Clone Graph (TODO) 
 - **Dynamic Programming**
   - Coordinates Type 
-    - [Leetcode: Triangle](https://leetcode.com/problems/triangle/)   
-    - [LeetCode: Unique Paths](https://leetcode.com/problems/unique-paths/submissions/)
-    - [LeetCode: Unique Paths II with Obstacles](https://leetcode.com/problems/unique-paths-ii/submissions/)
+    - [Leetcode: Triangle](https://leetcode.com/problems/triangle/), see notes in [DynamicProgramming.cs](https://github.com/ShawnShiSS/algorithms-notes/blob/main/src/Algorithms/DynamicProgramming/DynamicProgramming.Coordinate.cs)
+    - [LeetCode: Unique Paths](https://leetcode.com/problems/unique-paths/submissions/), see notes in [DynamicProgramming.cs](https://github.com/ShawnShiSS/algorithms-notes/blob/main/src/Algorithms/DynamicProgramming/DynamicProgramming.Coordinate.cs)
+    - [LeetCode: Unique Paths II with Obstacles](https://leetcode.com/problems/unique-paths-ii/submissions/), see notes in [DynamicProgramming.cs](https://github.com/ShawnShiSS/algorithms-notes/blob/main/src/Algorithms/DynamicProgramming/DynamicProgramming.Coordinate.cs)
     - [LintCode: Knight Shortest Path II](https://www.lintcode.com/problem/630/), see notes in [DynamicProgramming.cs](https://github.com/ShawnShiSS/algorithms-notes/blob/main/src/Algorithms/DynamicProgramming/DynamicProgramming.Coordinate.cs)
     - [LeetCode: Jump Game](https://leetcode.com/problems/jump-game/), see notes in [DynamicProgramming.cs](https://github.com/ShawnShiSS/algorithms-notes/blob/main/src/Algorithms/DynamicProgramming/DynamicProgramming.Coordinate.cs)
 
