@@ -13,7 +13,7 @@ Organize the C# solutions to the most-frequently-asked data structure and algori
   - Same Direction
   - Facing Direction
     - [LeetCode: Valid Palindrome](https://leetcode.com/problems/valid-palindrome/), see notes in [TwoPointers.FacingDirection.cs](https://github.com/ShawnShiSS/algorithms-notes/blob/main/src/Algorithms/TwoPointers/TwoPointers.FacingDirection.cs)
-    - Valid Palindrome II
+    - Valid Palindrome II, see notes in [TwoPointers.FacingDirection.cs](https://github.com/ShawnShiSS/algorithms-notes/blob/main/src/Algorithms/TwoPointers/TwoPointers.FacingDirection.cs)
     - Two Sum
     - [Leetcode: Sort Colors](https://leetcode.com/problems/sort-colors/)
     - [Lintcode: Rainbow Sort, AKA, Sort K Colors](https://www.lintcode.com/problem/143/)
