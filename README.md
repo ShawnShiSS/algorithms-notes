@@ -54,7 +54,7 @@ Organize the C# solutions to the most-frequently-asked data structure and algori
     - [LeetCode: Permutations](https://leetcode.com/problems/permutations/)
   - DFS with Memorization Search
     - [Leetcode: Triangle](https://leetcode.com/problems/triangle/), see notes in [DepthFirstSearch.BinaryTreeRecursionTemplate.cs](https://github.com/ShawnShiSS/algorithms-notes/blob/main/src/Algorithms/DepthFirstSearch/DepthFirstSearch.BinaryTreeRecursionTemplate.cs)   
-    - [LeetCode: Word Pattern](https://leetcode.com/problems/word-pattern/), see notes in 
+    - [LeetCode: Word Pattern](https://leetcode.com/problems/word-pattern/), see notes in [DepthFirstSearch.NarySearchTreeTemplate.cs](https://github.com/ShawnShiSS/algorithms-notes/blob/main/src/Algorithms/DepthFirstSearch/DepthFirstSearch.NarySearchTreeTemplate.cs)
 - **Graph**
   - Clone Graph (TODO) 
 - **Dynamic Programming**
