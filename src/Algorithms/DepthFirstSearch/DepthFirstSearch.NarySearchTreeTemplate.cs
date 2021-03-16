@@ -258,5 +258,64 @@ namespace Algorithms.DepthFirstSearch
 
             }
         }
+
+        /// <summary>
+        ///     290. Word Pattern
+        ///     Given a pattern and a string s, find if s follows the same pattern.
+        ///     Here follow means a full match, such that there is a bijection between a letter in pattern and a non-empty word in s.
+        ///     https://leetcode.com/problems/word-pattern/
+        ///     Solution: memorization search without DFS
+        /// </summary>
+        /// <param name="pattern"></param>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        public bool WordPattern(string pattern, string s)
+        {
+            // edge case
+            if (pattern == null || pattern.Length == 0)
+            {
+                return s.Length == 0;
+            }
+
+            string[] elements = s.Split(' ');
+
+            if (pattern.Length != elements.Length)
+            {
+                return false;
+            }
+
+            // Memorization search:
+            // For every pair, we need to make sure they are 1-1 relationship.
+            // mapping: key = pattern char, value = string value that a char maps to
+            Dictionary<char, string> mapping = new Dictionary<char, string>();
+            // One word can only be used by one key, 1-1 relationship.
+            HashSet<string> wordsAlreadyUsed = new HashSet<string>();
+            for (int i = 0; i < pattern.Length; i++)
+            {
+                char curr = pattern[i];
+                string element = elements[i];
+
+                // neither curr nor element has been visited
+                if (!mapping.ContainsKey(curr) &&
+                    !wordsAlreadyUsed.Contains(element))
+                {
+                    mapping.Add(curr, element);
+                    wordsAlreadyUsed.Add(element);
+                    continue;
+                }
+
+                // curr and element have been visited and match
+                if (mapping.ContainsKey(curr) && 
+                    mapping[curr] == element)
+                {
+                    continue;
+                }
+
+                // mismatch found
+                return false;
+            }
+
+            return true;
+        }
     }
 }
