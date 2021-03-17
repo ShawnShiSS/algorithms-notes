@@ -336,6 +336,7 @@ namespace Algorithms.DepthFirstSearch
             // DFS without memorization search
             //return DFSHelperForWordBreak(input, 0, wordDict);
 
+            // Track whether string is segmentable
             Dictionary<string, bool> segmentable = new Dictionary<string, bool>();
             return DFSHelperForWordBreak(input, 0, wordDict, segmentable);
         }
