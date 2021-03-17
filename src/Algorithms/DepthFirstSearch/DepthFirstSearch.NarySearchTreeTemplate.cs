@@ -317,5 +317,74 @@ namespace Algorithms.DepthFirstSearch
 
             return true;
         }
+
+        /// <summary>
+        ///     139. Word Break
+        ///     Given a string s and a dictionary of strings wordDict, return true if s can be segmented into a space-separated sequence of one or more dictionary words.
+        ///     Note that the same word in the dictionary may be reused multiple times in the segmentation.
+        ///     https://leetcode.com/problems/word-break/
+        ///     Solution: DFS + memorization search
+        ///     leetcode            leetcode
+        ///     /   \               /   \
+        ///     l   eetcode       leet   code
+        /// </summary>
+        /// <param name="input"></param>
+        /// <param name="wordDict"></param>
+        /// <returns></returns>
+        public bool WordBreak(string input, IList<string> wordDict)
+        {
+            // DFS without memorization search
+            //return DFSHelperForWordBreak(input, 0, wordDict);
+
+            Dictionary<string, bool> segmentable = new Dictionary<string, bool>();
+            return DFSHelperForWordBreak(input, 0, wordDict, segmentable);
+        }
+
+        /// <summary>
+        ///     DFS search helper for word break with memorization search
+        /// </summary>
+        /// <param name="input"></param>
+        /// <param name="startIndex"></param>
+        /// <param name="wordDict"></param>
+        /// <returns>Whether the substring of input can be segmented</returns>
+        private bool DFSHelperForWordBreak(string input, 
+                                           int startIndex, 
+                                           IList<string> wordDict,
+                                           Dictionary<string, bool> segmentable)
+        {
+            // Recursion Exit: when index is out of bound
+            if (startIndex == input.Length)
+            {
+                return true;
+            }
+
+            string current = input.Substring(startIndex, input.Length - startIndex);
+            if (segmentable.ContainsKey(current))
+            {
+                return segmentable[current];
+            }
+
+            // Recursion break down
+            // Check every possible length 
+            for (int len = 1; len <= input.Length - startIndex; len++)
+            {
+                // Memorization search: reduce redundant calculations and reduce O(2^n) to O(n2)
+                string prefix = input.Substring(startIndex, len);
+                if (!wordDict.Contains(prefix))
+                {
+                    // Current prefix is not a word, search next len
+                    continue;
+                }
+
+                if (DFSHelperForWordBreak(input, startIndex + len, wordDict, segmentable))
+                {
+                    return true;
+                }
+            }
+
+            segmentable.Add(current, false);
+            return false;
+        }
+        
     }
 }
