@@ -287,5 +287,58 @@ namespace Algorithms.DynamicProgramming
 
             return shortestPaths[rowCount - 1][colCount - 1];
         }
+
+        /// <summary>
+        ///     300. Longest Increasing Subsequence
+        ///     Given an integer array nums, return the length of the longest strictly increasing subsequence.
+        ///     A subsequence is a sequence that can be derived from an array by deleting some or no elements without changing the order of the remaining elements.
+        ///     https://leetcode.com/problems/longest-increasing-subsequence/
+        ///     Solution: dynamic programming
+        /// </summary>
+        /// <example>
+        ///     Input: nums = [10,9,2,5,3,7,101,18]
+        ///     Output: 4
+        ///     Explanation: The longest increasing subsequence is [2,3,7,101], therefore the length is 4.</example>
+        /// <param name="nums"></param>
+        /// <returns></returns>
+        public int LengthOfLIS(int[] nums)
+        {
+            // edge case
+            if (nums == null || nums.Length == 0)
+            {
+                return 0;
+            }
+
+            // DP state dp[i] : the LIS at the i-th element
+            int[] lisTracker = new int[nums.Length];
+            
+            // DP initialization: all LIS should be 1 as there can be at least one element
+            for (int i = 0; i < lisTracker.Length; i++)
+            {
+                lisTracker[i] = 1;
+            }
+
+            // DP function: for each element, the LIS is 1 plus the max of all previous elements
+            for (int curr = 0; curr < lisTracker.Length; curr++)
+            {
+                for (int prev = 0; prev < curr; prev++)
+                {
+                    // BL: check if the current element value is larger than the previous element
+                    if (nums[curr] > nums[prev])
+                    {
+                        lisTracker[curr] = Math.Max(lisTracker[prev] + 1, lisTracker[curr]);
+                    }
+                }
+            }
+
+            // DP result: the maximum value in the LIS tracker
+            int result = lisTracker[0];
+            for (int i = 1; i < lisTracker.Length; i++)
+            {
+                result = Math.Max(result, lisTracker[i]);
+            }
+
+            return result;
+        }
     }
 }
