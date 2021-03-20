@@ -12,6 +12,7 @@ Organize the C# solutions to the most-frequently-asked data structure and algori
 - **Two Pointers**
   - Same Direction
     - [LeetCode: Number of Substrings With Only 1s](https://leetcode.com/problems/number-of-substrings-with-only-1s/), see notes in [TwoPointers.SameDirection.cs](https://github.com/ShawnShiSS/algorithms-notes/blob/main/src/Algorithms/TwoPointers/TwoPointers.SameDirection.cs)
+    - [LintCode: Two Sum - Difference equals to target](https://www.lintcode.com/problem/two-sum-difference-equals-to-target/), see notes in [TwoPointers.SameDirection.cs](https://github.com/ShawnShiSS/algorithms-notes/blob/main/src/Algorithms/TwoPointers/TwoPointers.SameDirection.cs)
   - Facing Direction
     - [LeetCode: Valid Palindrome](https://leetcode.com/problems/valid-palindrome/), see notes in [TwoPointers.FacingDirection.cs](https://github.com/ShawnShiSS/algorithms-notes/blob/main/src/Algorithms/TwoPointers/TwoPointers.FacingDirection.cs)
     - [Valid Palindrome II](https://leetcode.com/problems/valid-palindrome-ii/), see notes in [TwoPointers.FacingDirection.cs](https://github.com/ShawnShiSS/algorithms-notes/blob/main/src/Algorithms/TwoPointers/TwoPointers.FacingDirection.cs)
