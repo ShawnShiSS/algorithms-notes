@@ -63,8 +63,9 @@ Organize the C# solutions to the most-frequently-asked data structure and algori
     - [Leetcode: Triangle](https://leetcode.com/problems/triangle/), see notes in [DynamicProgramming.cs](https://github.com/ShawnShiSS/algorithms-notes/blob/main/src/Algorithms/DynamicProgramming/DynamicProgramming.Coordinate.cs)
     - [LeetCode: Unique Paths](https://leetcode.com/problems/unique-paths/submissions/), see notes in [DynamicProgramming.cs](https://github.com/ShawnShiSS/algorithms-notes/blob/main/src/Algorithms/DynamicProgramming/DynamicProgramming.Coordinate.cs)
     - [LeetCode: Unique Paths II with Obstacles](https://leetcode.com/problems/unique-paths-ii/submissions/), see notes in [DynamicProgramming.cs](https://github.com/ShawnShiSS/algorithms-notes/blob/main/src/Algorithms/DynamicProgramming/DynamicProgramming.Coordinate.cs)
-    - [LintCode: Knight Shortest Path II](https://www.lintcode.com/problem/630/), see notes in [DynamicProgramming.cs](https://github.com/ShawnShiSS/algorithms-notes/blob/main/src/Algorithms/DynamicProgramming/DynamicProgramming.Coordinate.cs)
+    - [LintCode: Knight Shortest Path II](https://www.lintcode.com/problem/630/), see notes in [DynamicProgramming.Coordinate.cs](https://github.com/ShawnShiSS/algorithms-notes/blob/main/src/Algorithms/DynamicProgramming/DynamicProgramming.Coordinate.cs)
     - [LeetCode: Jump Game](https://leetcode.com/problems/jump-game/), see notes in [DynamicProgramming.cs](https://github.com/ShawnShiSS/algorithms-notes/blob/main/src/Algorithms/DynamicProgramming/DynamicProgramming.Coordinate.cs)
+    - [LeetCode: Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/), see notes in [DynamicProgramming.Coordinate.cs](https://github.com/ShawnShiSS/algorithms-notes/blob/main/src/Algorithms/DynamicProgramming/DynamicProgramming.Coordinate.cs)
 
 ## Articles
 - [Algorithms — Two Pointers Template That Solves Many Problems](https://shawn-shi.medium.com/summary-notes-on-algorithms-two-pointers-c81735def5b2)
