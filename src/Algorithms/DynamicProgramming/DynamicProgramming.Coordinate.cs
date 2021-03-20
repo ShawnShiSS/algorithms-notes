@@ -293,7 +293,7 @@ namespace Algorithms.DynamicProgramming
         ///     Given an integer array nums, return the length of the longest strictly increasing subsequence.
         ///     A subsequence is a sequence that can be derived from an array by deleting some or no elements without changing the order of the remaining elements.
         ///     https://leetcode.com/problems/longest-increasing-subsequence/
-        ///     Solution: dynamic programming
+        ///     Solution: dynamic programming, O(n^2) time
         /// </summary>
         /// <example>
         ///     Input: nums = [10,9,2,5,3,7,101,18]
