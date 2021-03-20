@@ -61,6 +61,55 @@ namespace Algorithms.TwoPointers
             return result;
         }
 
-        
+        /// <summary>
+        ///     1513. Number of Substrings with Only 1s
+        ///     Given a binary string s (a string consisting only of '0' and '1's).
+        ///     Return the number of substrings with all characters 1's.
+        ///     Since the answer may be too large, return it modulo 10^9 + 7.
+        ///     https://leetcode.com/problems/number-of-substrings-with-only-1s/
+        ///     Solution: two pointers
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        public int NumberOfSubstrings(string input)
+        {
+            int result = 0;
+
+            if (input == null || input.Length == 0)
+            {
+                return result;
+            }
+
+            // Two pointers with same direction
+            // to calculate the length of substring starting from index slower.
+            // The length matches the count. E.g., for 111, 3+2+1=6, which is three "1", two "11", one "111".
+            int faster = 1;
+            for (int slower = 0; slower < input.Length; slower++)
+            {
+                // Skip 0 zeros
+                if (input[slower] == '0')
+                {
+                    continue;
+                }
+
+                // Faster pointer must be at least 1 larger than slower
+                faster = Math.Max(faster, slower + 1);
+
+                // Check boundary,
+                // and find the first faster pointer that does not meet the criteria, aka, value = 0
+                while (faster < input.Length && input[faster] == '1')
+                {
+                    faster++;
+                }
+
+                result = result + (faster - slower);
+            }
+
+            return result;
+            // input : 0 1 1 0 1 1 1
+            //               ^^
+            //               ij
+            // answer: 2 + 1 
+        }
     }
 }
