@@ -40,6 +40,8 @@ Organize the C# solutions to the most-frequently-asked data structure and algori
   - BFS template to traverse a Tree using a single Queue
   - BFS template to traverse a Graph using a single Queue and a single Dictionary
     - [Topological Sorting](https://www.lintcode.com/problem/topological-sorting/)
+  - BFS template variation
+    -  - [Leetcode: Subsets](https://leetcode.com/problems/subsets/), see BreadthFirstSearch.cs
 - **Depth First Search** 
   - DFS without recursion (using stack)
     - Binary Search Tree In-Order Traversal Template Code using Stack
