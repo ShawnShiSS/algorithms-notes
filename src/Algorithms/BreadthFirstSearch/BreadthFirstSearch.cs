@@ -136,5 +136,52 @@ namespace Algorithms.BreadthFirstSearch
 
             return result;
         }
+
+        /// <summary>
+        ///     78. Subsets
+        ///     Given an integer array nums of unique elements, return all possible subsets (the power set).
+        ///     The solution set must not contain duplicate subsets.Return the solution in any order.
+        ///     https://leetcode.com/problems/subsets/
+        ///     Solution: BFS variation
+        /// </summary>
+        /// <param name="nums"></param>
+        /// <returns></returns>
+        public IList<IList<int>> Subsets(int[] nums)
+        {
+            IList<IList<int>> queue = new List<IList<int>>();
+            
+            // corner cases
+            if (nums == null)
+            {
+                return queue;
+            }
+
+            Array.Sort(nums);
+
+            // simulate a queue to track subsets
+            queue.Add(new List<int>());
+            int index = 0;
+            while (index < queue.Count)
+            {
+                IList<int> subset = queue[index];
+                index++;
+
+                for (int i = 0; i < nums.Length; i++)
+                {
+                    // skip elements in nums already exist in subset
+                    if (subset.Count > 0 && subset[subset.Count - 1] >= nums[i])
+                    {
+                        continue;
+                    }
+
+                    IList<int> newSubset = new List<int>(subset);
+                    newSubset.Add(nums[i]);
+
+                    queue.Add(newSubset);
+                }
+            }
+
+            return queue;
+        }
     }
 }

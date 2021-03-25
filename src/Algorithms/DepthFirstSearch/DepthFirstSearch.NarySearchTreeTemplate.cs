@@ -22,6 +22,7 @@ namespace Algorithms.DepthFirstSearch
         ///     The solution set must not contain duplicate subsets.Return the solution in any order.
         ///     https://leetcode.com/problems/subsets-ii/
         ///     Solution: DFS template with duplicates
+        ///     Note, it is possible to use BFS as well, see BreadthFirstSearch.cs
         /// </summary>
         /// <param name="nums"></param>
         /// <returns></returns>
