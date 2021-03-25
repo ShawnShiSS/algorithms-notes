@@ -111,5 +111,55 @@ namespace Algorithms.TwoPointers
             //               ij
             // answer: 2 + 1 
         }
+
+        /// <summary>
+        ///     604. Window Sum
+        ///     Given an array of n integers, and a moving window(size k), move the window at each iteration from the start of the array, find the sum of the element inside the window at each moving.
+        ///     https://www.lintcode.com/problem/window-sum/
+        ///     Solution: two pointers same direction.
+        /// </summary>
+        /// <param name="nums"></param>
+        /// <param name="k"></param>
+        /// <returns></returns>
+        public int[] WindowSum(int[] nums, int k)
+        {
+            // corner cases
+            if (nums == null || 
+                nums.Length == 0 ||
+                k <= 0)
+            {
+                return new int[] { };
+            }
+
+            int[] result = new int[nums.Length - k + 1];
+
+
+            // Two pointers same direction
+            // slow - beginning of window, inclusive
+            // fast - end of window, exclusive
+            int fast = 1;
+            // window sum for range [slow, fast)
+            int windowSum = nums[0];
+
+            for (int slow = 0; slow < nums.Length; slow++)
+            {
+                while (fast < nums.Length && fast - slow < k)
+                {
+                    windowSum += nums[fast];
+                    fast++;
+                }
+
+                // Two possible exit paths: out of bound || window size == k
+                if (fast - slow == k)
+                {
+                    result[slow] = windowSum;
+                }
+
+                // Important: substract value before incrementing slow pointer
+                windowSum -= nums[slow];
+            }
+
+            return result;
+        }
     }
 }
