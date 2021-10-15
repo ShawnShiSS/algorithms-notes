@@ -40,6 +40,7 @@ Organize the C# solutions to the most-frequently-asked data structure and algori
 - **Breadth First Search**
   - BFS template to traverse a Tree using a single Queue
     - [Word Ladder](https://leetcode.com/problems/word-ladder)
+    - [Number of Islands](https://leetcode.com/problems/number-of-islands/)
   - BFS template to traverse a Graph using a single Queue and a single Dictionary
     - [Topological Sorting](https://www.lintcode.com/problem/topological-sorting/)
   - BFS template variation
