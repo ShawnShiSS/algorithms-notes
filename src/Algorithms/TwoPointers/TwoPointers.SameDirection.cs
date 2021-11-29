@@ -4,6 +4,7 @@ using System.Text;
 
 namespace Algorithms.TwoPointers
 {
+
     /// <summary>
     ///     Partial class for Two Pointers with the same direction 
     /// </summary>
