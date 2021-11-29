@@ -9,6 +9,8 @@ namespace Algorithms.DynamicProgramming
     /// </summary>
     public partial class DynamicProgramming
     {
+
+
         /// <summary>
         ///     ///     92. Backpack
         ///     Given n items, each item has size items[i], an integer m denotes the size of a backpack. How full you can fill this backpack?

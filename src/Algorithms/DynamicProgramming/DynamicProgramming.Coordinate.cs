@@ -6,6 +6,67 @@ namespace Algorithms.DynamicProgramming
 {
     public partial class DynamicProgramming
     {
+
+
+        /// <summary>
+        ///     91. Decode Ways
+        ///     https://leetcode.com/problems/decode-ways/
+        /// </summary>
+        /// <param name="s"></param>
+        /// <returns></returns>
+        public int NumDecodings(string s)
+        {
+            if (string.IsNullOrEmpty(s) || s[0] == '0')
+            {
+                return 0;
+            }
+
+            int n = s.Length;
+
+            // DP definition
+            // dp[i]: number of decodings in the first i chars, including 0 chars
+            int[] dp = new int[n + 1];
+
+            // DP initialization
+            dp[0] = 1;
+            dp[1] = 1;
+
+            // DP breakdown
+            for (int i = 2; i <= n; i++)
+            {
+                // Single last digit
+                int endingWithSingleDigit = dp[i - 1] * CanDecode(s.Substring(i - 1, 1));
+
+                // Two last digits
+                int endingWithDoubleDigits = dp[i - 2] * CanDecode(s.Substring(i - 2, 2));
+
+                dp[i] = endingWithSingleDigit + endingWithDoubleDigits;
+            }
+
+            return dp[n];
+        }
+
+        private int CanDecode(string s)
+        {
+            int parsedValue;
+            if (!int.TryParse(s, out parsedValue))
+            {
+                return 0;
+            }
+
+            if (s.Length == 1 && parsedValue >= 1 && parsedValue <= 9)
+            {
+                return 1;
+            }
+            if (s.Length == 2 && parsedValue >= 10 && parsedValue <= 26)
+            {
+                return 1;
+            }
+
+            return 0;
+        }
+
+
         /// <summary>
         ///     NOTE: Number triangle is not a binary tree.
         ///     120. Triangle
@@ -225,7 +286,12 @@ namespace Algorithms.DynamicProgramming
             int colCount = grid.Length;
 
             // DP state: shortest path from 0,0 to i,j
-            int[][] shortestPaths = new int[rowCount][colCount];
+            int[][] shortestPaths = new int[rowCount][];
+            for (int i = 0; i < rowCount; i++)
+            {
+                shortestPaths[i] = new int[colCount];
+            }
+
             // default values: max value of int
             for (int row = 0; row < rowCount; row++)
             {
@@ -248,7 +314,7 @@ namespace Algorithms.DynamicProgramming
                 for (int row = 0; row < rowCount; row++)
                 {
                     // Check for obstacle
-                    if (grid[row][col] == 1)
+                    if (grid[row][col] == true)
                     {
                         continue;
                     }

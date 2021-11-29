@@ -9,5 +9,7 @@ namespace Algorithms.DynamicProgramming
     /// </summary>
     public partial class DynamicProgramming
     {
+        private readonly int i = 0;
     }
+
 }
