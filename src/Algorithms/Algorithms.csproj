@@ -5,13 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="DynamicProgramming\DynamicProgramming.Coordinate.cs" />
     <Compile Remove="TwoPointers\TwoPointers.FacingDirection.PartitionType.cs" />
     <Compile Remove="TwoPointers\TwoPointers.FacingDirection.TwoSumCategory.cs" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="DynamicProgramming\DynamicProgramming.Coordinate.cs" />
     <None Include="TwoPointers\TwoPointers.FacingDirection.PartitionType.cs" />
     <None Include="TwoPointers\TwoPointers.FacingDirection.TwoSumCategory.cs" />
   </ItemGroup>
