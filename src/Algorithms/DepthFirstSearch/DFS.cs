@@ -4,86 +4,65 @@ namespace Algorithms.DepthFirstSearch
 {
     public class DFS
     {
-        public readonly int[] rowDirections = new int[] { 0, 1, 0, -1 };
-        public readonly int[] colDirections = new int[] { 1, 0, -1, 0 };
-
-        public IList<int> SpiralOrder(int[][] matrix)
+        public class CombinationIterator
         {
-            // Goal: for each element, search whether we can travel in the spiral order, and stop after we have visited all elements.
+            private Queue<string> _combinations;
 
-            // Corner cases
-            if (matrix == null || matrix.Length == 0 || matrix[0].Length == 0)
+            public CombinationIterator(string characters, int combinationLength)
             {
-                return new List<int>();
+                BuildCombinations(characters, combinationLength);
             }
 
-            // Search in spiral fashion
-            List<int> result = new List<int>();
-            HashSet<string> visited = new HashSet<string>();
-
-            SpiralSearch(matrix, 0, 0, result, visited);
-
-            return result;
-        }
-
-        // DFS search 
-        private void SpiralSearch(int[][] matrix, int row, int col, List<int> result, HashSet<string> visited)
-        {
-            // Add to result
-            result.Add(matrix[row][col]);
-            visited.Add($"{row}{col}");
-
-            // Exit when all neighbours either have been visited or are out of bound
-            // if (HasReacheTheSprialEnd(matrix, row, col, visited))
-            // {
-            //     return;
-            // }
-            // Or, return when result has collected all elements
-            if (result.Count == matrix.Length * matrix[0].Length)
+            public string Next()
             {
-                return;
-            }
-
-            // Search in four directions: right, down, left, up        
-            for (int i = 0; i < rowDirections[i]; i++)
-            {
-                int newRow = row + rowDirections[i];
-                int newCol = col + colDirections[i];
-
-                if (!IsOutOfBound(matrix, newRow, newCol))
+                if (!HasNext())
                 {
-                    SpiralSearch(matrix, newRow, newCol, result, visited);
+                    return null;
+                }
 
-                    // We can only move in one direction, 
-                    // so we break after we move
-                    break;
+                return _combinations.Dequeue();
+            }
+
+            public bool HasNext()
+            {
+                return _combinations.Count > 0;
+            }
+
+            private void BuildCombinations(string characters, int combinationLength)
+            {
+                // Corner cases
+
+                // Build
+                _combinations = new Queue<string>();
+                List<char> current = new List<char>();
+
+                DfsSearchHelper(characters, 0, current, combinationLength);
+            }
+
+            // Search all combinations of length that start with current
+            private void DfsSearchHelper(string characters, int start, List<char> current, int combinationLength)
+            {
+                // Exit when we have reached the length requirement
+                if (current.Count == combinationLength)
+                {
+                    _combinations.Enqueue(string.Join("", current));
+                    return;
+                }
+
+                for (int i = start; i < characters.Length; i++)
+                {
+
+                    current.Add(characters[i]);
+
+                    // IMPORTANT: use i+1 instead of start + 1, in order to skip visited chars
+                    DfsSearchHelper(characters, i + 1, current, combinationLength);
+
+                    current.RemoveAt(current.Count - 1);
+
                 }
             }
         }
 
-        private bool IsOutOfBound(int[][] matrix, int row, int col)
-        {
-            return !(row >= 0 && row < matrix.Length &&
-                     col >= 0 && col < matrix[0].Length);
-        }
 
-        // A spiral end is an element whose four neighbours are either out of bound or have been visited
-        private bool HasReacheTheSprialEnd(int[][] matrix, int row, int col, HashSet<string> visited)
-        {
-            for (int i = 0; i < rowDirections[i]; i++)
-            {
-                int newRow = row + rowDirections[i];
-                int newCol = col + colDirections[i];
-
-                if (!IsOutOfBound(matrix, newRow, newCol) &&
-                    !visited.Contains($"{newRow}{newCol}"))
-                {
-                    // Has something inbound to visit next
-                    return false;
-                }
-            }
-
-            return true;
-        }
     }
 }

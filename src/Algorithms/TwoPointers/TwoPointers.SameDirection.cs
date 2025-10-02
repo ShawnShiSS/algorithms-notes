@@ -162,5 +162,129 @@ namespace Algorithms.TwoPointers
 
             return result;
         }
+
+
+        public class Element
+        {
+            public Element(int row, int col, int value)
+            {
+                this.Row = row;
+                this.Col = col;
+                this.Value = value;
+            }
+            public int Row { get; set; }
+            public int Col { get; set; }
+            public int Value { get; set; }
+        }
+
+        /// <summary>
+        ///     Interleave the input, an array of arrays.
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        public List<int> InterleaveWithTwoPointers(int[][] input)
+        {
+            // Corner cases
+            if (input == null ||
+                input.Length == 0 ||
+                input[0].Length == 0)
+            {
+                return new List<int>();
+            }
+
+            List<int> result = new List<int>();
+            int maxSubarrayLength = GetMaxSubarrayLength(input);
+
+            for (int currentCol = 0; currentCol < maxSubarrayLength; currentCol++)
+            {
+                for (int row = 0; row < input.Length; row++)
+                { 
+                    if (currentCol < input[row].Length)
+                    {
+                        result.Add(input[row][currentCol]);
+                    }
+                }
+            }
+
+            return result;
+
+        }
+        // 1,4,7,10
+        // 2,5,8
+        // 3,6,9,12
+        //       i
+        // result
+        // 
+
+        private int GetMaxSubarrayLength(int[][] input)
+        {
+            int maxLength = 0;
+            foreach (int[] subarray in input)
+            {
+                maxLength = Math.Max(maxLength, subarray.Length);
+            }
+
+            return maxLength;
+        }
+
+        // 1,4,7,10
+        // 2,5,8
+        // 3,6,9,12
+        // Queue:
+        // |1|
+        // |2|
+        // |3|
+        // ---
+        // Result: 
+        /// <summary>
+        ///     Interleave the input, an array of arrays.
+        /// </summary>
+        public List<int> InterleaveOnline(int[][] input)
+        {
+            // Corner cases
+            if (input == null ||
+                input.Length == 0 ||
+                input[0].Length == 0)
+            {
+                return new List<int>();
+            }
+
+            // Build the result using a queue
+            Queue<Element> queue = InitializeQueueWithFirstElements(input);
+            List<int> result = new List<int>();
+
+            while (queue.Count > 0)
+            {
+                Element current = queue.Dequeue();
+                // Put in result
+                result.Add(current.Value);
+
+                // Add the next element to queue, if any
+                if (current.Col + 1 < input[current.Row].Length)
+                {
+                    queue.Enqueue(new Element(current.Row, 
+                                              current.Col + 1, 
+                                              input[current.Row][current.Col + 1]));
+                }
+            }
+
+            return result;
+        }
+        
+        private Queue<Element> InitializeQueueWithFirstElements(int[][] input)
+        {
+            Queue<Element> queue = new Queue<Element>();
+            for (int row = 0; row < input.Length; row++)
+            {
+                if (input[row] != null &&
+                    input[row].Length > 0)
+                {
+                    queue.Enqueue(new Element(row, 0, input[row][0]));
+                }
+            }
+
+            return queue;
+        }
+
     }
 }

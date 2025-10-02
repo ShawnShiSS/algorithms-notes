@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Algorithms.TwoPointers
 {
@@ -177,6 +178,7 @@ namespace Algorithms.TwoPointers
             
             // Step 1 - sort. O(NLogN) time
             Array.Sort(nums);
+            var sortedNums = nums.OrderBy(n => n); // Lazy execution
 
             // Step 2 - two pointers O(N) time
             int left = 0;

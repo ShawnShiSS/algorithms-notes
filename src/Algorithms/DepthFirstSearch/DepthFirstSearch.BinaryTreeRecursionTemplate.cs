@@ -311,5 +311,7 @@ namespace Algorithms.DepthFirstSearch
             memory.Add(coordinateStr, Math.Min(leftSubTriangleMin, rightSubTriangleMin) + triangle[x][y]);
             return memory[coordinateStr];
         }
+
+        
     }
 }
